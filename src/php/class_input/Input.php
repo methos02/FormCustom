@@ -1,5 +1,5 @@
 <?php
-namespace App\Api\FormCustom\class_input;
+namespace App\Utils\FormCustom\class_input;
 
 
 class Input
@@ -23,22 +23,17 @@ class Input
         $this->params = [
             'class_btn' => isset($options['class_btn'])? ' ' . $options['class_btn']: '',
             'class_label' => isset($options['class_label'])? ' ' . $options['class_label']: '',
-            'class_before' => isset($options['before'])? ' before': '',
-            'id' => isset($options['id'])? ' id="' .$options['id'] . '"': '',
             'dataType' => $this->dataType,
             'error' => $this->getError($options['nom'], $options['errors']),
             'label' => $options['label'],
             'message' => isset($options['message'])? ' data-message="' . $options['message'] . '"': '',
             'nom' => $options['nom'],
-            'custom' => isset($options['custom'])? 'data-custom="' . $options['custom'] . '"' : '',
             'obliger' => isset($options['obliger']) && $options['obliger'] == 1? ' data-obliger="1"': '',
             'disabled' => isset($options['disabled']) && $options['disabled'] == true? ' disabled="disabled"': '',
             'option' => isset($options['option'])? 'data-option="' . $options['option'] . '"' : '',
             'type' => 'text',
             'value' => $value,
             'valueFormat' => $this->formatValue($value),
-            'view' => isset($options['view']) && $options['view'] == false ? ' style="display:none"' : '',
-            'before' => $options['before'] ?? '',
             'width' => isset($options['width']) && in_array($options['width'], self::WIDTH)? ' ' . $options['width']: '',
         ];
     }

@@ -7,7 +7,6 @@
   .order {flex: 1;}
 
   > a, > input[type=submit], > button {
-    height: 44px;
     min-width: 110px;
     margin: 0 auto;
   }
@@ -25,9 +24,9 @@
 }
 
 @import "message";
+@import "uForm";
 
 @import "input/input";
-@import "input/btn";
 @import "input/colorpicker";
 @import "input/checkbox";
 @import "input/cropper_img";
@@ -37,6 +36,7 @@
 @import "input/heure";
 @import "input/multi_select";
 @import "input/text";
+@import "input/select";
 
 
 .submit-compact {

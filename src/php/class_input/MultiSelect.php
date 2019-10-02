@@ -1,5 +1,5 @@
 <?php
-namespace App\Api\FormCustom\class_input;
+namespace App\Utils\FormCustom\class_input;
 
 
 class MultiSelect extends Input
@@ -16,7 +16,7 @@ class MultiSelect extends Input
     public function setParam() {
         $this->params = array_merge($this->params, [
             'liste' => $this->liste,
-            'viewPluriel' => is_array($this->params['value']) && count($this->params['value']) > 1 ? '' : 'style="display: none"',
+            'viewPluriel' => count($this->params['value']) > 1 ? '' : 'style="display: none"',
             'nb_checked' => is_array($this->params['value'])? count($this->params['value']) : 0
         ]);
     }

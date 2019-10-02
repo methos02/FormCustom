@@ -1,0 +1,11 @@
+.uForm-erreur {
+  background-color: white !important;
+  border: 2px solid #f44336 !important;
+  color: #f44336 !important;
+}
+
+.uForm-erreur.btn-uform-select, .uForm-erreur:hover {
+  background-color: #f44336 !important;
+  border: 2px solid #f44336 !important;
+  color: white !important;
+}

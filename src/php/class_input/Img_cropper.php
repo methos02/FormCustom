@@ -1,5 +1,5 @@
 <?php
-namespace App\Api\FormCustom\class_input;
+namespace App\Utils\FormCustom\class_input;
 
 class Img_cropper extends Input
 {

@@ -2,7 +2,7 @@
 <div class="file-compact<?= $params['width'] . $params['class_label']?>">
     <div class="label-compact img-cropper">
         <div class="appercu-file" data-preview>
-            <img src="<?= $params['preview'] ?>" alt="Apperçu de l'image" id="appercu-<?= $params['nom'] ?>">
+            <img src="<?= $params['preview'] ?>" alt="Apperçu de l'image" id="appercu-<?= $params['nom'] ?>" style="display: block;">
         </div>
         <input type="file" name="<?= $params['nom'] ?>" data-type="file" data-accept="webimg" data-cropper <?= $params['ratio'] . $params['option'] . $params['obliger'] ?> style="display: none;">
         <input type="hidden" name="x">

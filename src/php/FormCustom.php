@@ -1,20 +1,20 @@
 <?php
-namespace App\Api\FormCustom;
+namespace App\Utils\FormCustom;
 
-use App\Api\FormCustom\Config\FormatData;
-use App\Api\FormCustom\class_input\Checkbox;
-use App\Api\FormCustom\class_input\Datalist;
-use App\Api\FormCustom\class_input\Date;
-use App\Api\FormCustom\class_input\Heure;
-use App\Api\FormCustom\class_input\File;
-use App\Api\FormCustom\class_input\Img_cropper;
-use App\Api\FormCustom\class_input\Input;
-use App\Api\FormCustom\class_input\Mdp;
-use App\Api\FormCustom\class_input\MdpConfirm;
-use App\Api\FormCustom\class_input\MultiSelect;
-use App\Api\FormCustom\class_input\Password;
-use App\Api\FormCustom\class_input\Select;
-use App\Api\FormCustom\class_input\Text;
+use App\Utils\FormCustom\Config\FormatData;
+use App\Utils\FormCustom\class_input\Checkbox;
+use App\Utils\FormCustom\class_input\Datalist;
+use App\Utils\FormCustom\class_input\Date;
+use App\Utils\FormCustom\class_input\Heure;
+use App\Utils\FormCustom\class_input\File;
+use App\Utils\FormCustom\class_input\Img_cropper;
+use App\Utils\FormCustom\class_input\Input;
+use App\Utils\FormCustom\class_input\Mdp;
+use App\Utils\FormCustom\class_input\MdpConfirm;
+use App\Utils\FormCustom\class_input\MultiSelect;
+use App\Utils\FormCustom\class_input\Password;
+use App\Utils\FormCustom\class_input\Select;
+use App\Utils\FormCustom\class_input\Text;
 
 class FormCustom
 {

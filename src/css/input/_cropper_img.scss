@@ -1,8 +1,21 @@
 .img-cropper {
   display: flex;
   flex-direction: column;
+  margin: 0;
 
   .label-input {display: none;}
+
+  img {
+    border-radius: 4px;
+    width: 100%;
+  }
+
+  .appercu-file{
+    padding: 0;
+    height: auto;
+    overflow: hidden;
+  }
+
   .input_message {
     position: absolute;
     background: red;
@@ -13,4 +26,9 @@
     top: 85px;
     right: 0;
   }
+}
+
+#Modal-resize {
+  img{max-width: 55%;}
+  .btn-resize {text-align: center;}
 }
