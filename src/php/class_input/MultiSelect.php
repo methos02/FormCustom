@@ -16,7 +16,7 @@ class MultiSelect extends Input
     public function setParam() {
         $this->params = array_merge($this->params, [
             'liste' => $this->liste,
-            'viewPluriel' => count($this->params['value']) > 1 ? '' : 'style="display: none"',
+            'viewPluriel' => is_array($this->params['value']) && count($this->params['value']) > 1 ? '' : 'style="display: none"',
             'nb_checked' => is_array($this->params['value'])? count($this->params['value']) : 0
         ]);
     }

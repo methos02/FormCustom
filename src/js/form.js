@@ -46,10 +46,6 @@ $(document).on('click', 'button[data-verif], input[type=submit][data-verif], a[d
         CKEDITOR.instances[name].updateElement();
     });
 
-    console.log(form.find(':input[data-type]:not([type=hidden], [type=submit])').filter(function () {
-        return noStatut(this) || statutMultiInput(this);
-    }));
-
     //faire le test des inputs non verifier
     form.find(':input[data-type]:not([type=hidden], [type=submit])').filter(function () {
         return noStatut(this) || statutMultiInput(this);
