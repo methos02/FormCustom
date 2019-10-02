@@ -1,0 +1,19 @@
+/* ----------------- */
+/*   DOCUMENTATION   */
+/* ----------------- */
+
+data-obliger="1" si l'input est obligé
+data-type => type de verification a faire
+data-message => personnalisation du message d'insertErreur
+
+<input type="submit" data-verif="NOM DU FORM">
+data-verif pour activer la vérification du form
+
+confirmation de mot de passe => les deux inputs doivent avoir le même attr name l'un finissant par _1 et l'autres par _2
+uform => under form, gestion des formulaires avec onglet
+
+CLASS
+row-flex -> Pour faire une ligne d'input
+    -> order: pour répartir de mannière identique les inputs avec cette class
+    -> demi: input de 50%
+    -> tier: input 33%

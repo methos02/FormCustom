@@ -1,0 +1,31 @@
+.border-heure {
+  position: relative;
+  width: 145px;
+  height: 44px;
+  font-weight: normal !important;
+  line-height: 1.42857143;
+  color: #555;
+  background-color: #fff;
+  background-image: none;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+}
+
+.border-heure input:focus{ outline: none;}
+.input-heure{
+  padding-left: 10px;
+  padding-top: 18px;
+  height: 42px;
+  width: 60px;
+  border: 0;
+  font-size: 14px;
+  border-radius: 5px 0 0 5px;
+}
+
+.input-minute{
+  padding-top: 18px;
+  height: 42px;
+  width: 60px;
+  border: 0;
+  font-size: 14px;
+}

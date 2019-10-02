@@ -1,0 +1,50 @@
+.input-color {
+  min-width: auto !important;
+
+  .input-compact {
+    width: 180px;
+    padding: 18px 60px 6px 6px !important;
+  }
+
+  .input-compact::placeholder {
+    font-size: 10px;
+    font-family: sans-serif;
+  }
+
+  .popup.popup_right {
+    right: 0;
+    left: inherit !important;
+  }
+
+  .picker_arrow{
+    display: none;
+  }
+
+  .color-picker {
+    width: 50px;
+    height: 35px;
+    position: absolute;
+    right: 5px;
+    top: 4px;
+    border: 1px solid #cccccc;
+    border-radius: 4px;
+    background-color: white;
+    cursor: pointer;
+  }
+
+  .color-picker:hover {
+    border: 1px solid #878282;
+  }
+
+  .color-picker:focus {
+    outline:0;
+  }
+
+  .icone-click {
+    position: absolute;
+    right: 4px;
+    top: 2px;
+    width: 17px;
+    height: 20px;
+  }
+}

@@ -1,0 +1,32 @@
+.btn {
+    padding: 10px;
+    margin: 5px;
+    font-size: 18px;
+    text-decoration: none;
+    -webkit-border-radius: 3px;
+    border-radius: 5px;
+    -webkit-transition: all 0.3s ease-in-out;
+    -moz-transition: all 0.3s ease-in-out;
+    transition: all 0.3s ease-in-out;
+    border: 1px solid #C6CBCB;
+    color: #6c6c6c;
+    background-color: #fff;
+    cursor: pointer;
+    box-sizing: border-box;
+    text-align: center;
+}
+
+.btn:hover {
+    background-color: #e0e0e0;
+}
+
+.btn_valide {
+    border: 1px solid #8cd453;
+    color: #63bf51;
+    font-weight: 700;
+}
+
+.btn_erreur {
+    background-color: #ff8f77;
+    border: 1px solid red;
+}

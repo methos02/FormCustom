@@ -1,0 +1,52 @@
+.row-flex {
+  display: flex;
+  margin: 10px 0;
+
+  .demi {flex-basis: calc(50% - 10px)}
+  .tier {flex-basis: 33%}
+  .order {flex: 1;}
+
+  > a, > input[type=submit], > button {
+    height: 44px;
+    min-width: 110px;
+    margin: 0 auto;
+  }
+}
+
+.row-center { justify-content: center;}
+
+.row-column {
+  display: flex;
+  flex-direction: column;
+
+  > .label-compact { margin-right: 0;}
+
+  >* { margin: 5px 0; }
+}
+
+@import "message";
+
+@import "input/input";
+@import "input/btn";
+@import "input/colorpicker";
+@import "input/checkbox";
+@import "input/cropper_img";
+@import "input/datalist";
+@import "input/date";
+@import "input/file";
+@import "input/heure";
+@import "input/multi_select";
+@import "input/text";
+
+
+.submit-compact {
+  width: 125px;
+  margin-right: auto;
+  margin-left: auto;
+}
+
+.btn-loader {height: 16px}
+select {min-width: 150px}
+select[disabled] {background-color: #d8d8d8c2;}
+#cke_news {height: 100%}
+#cke_1_contents{position: relative}

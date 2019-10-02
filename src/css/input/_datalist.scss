@@ -1,0 +1,22 @@
+.datalist-btn {
+  width: calc(100% - 30px);
+  border-radius: 4px 0 0 4px;
+}
+
+.datalist-reset {
+  .input-compact {
+    width: calc(100% - 30px);
+    border-radius: 4px 0 0 4px;
+  }
+
+  button {
+    height: 44px;
+    top: -6px;
+    position: relative;
+    border-radius: 0 4px 4px 0;
+    border-top: 1px solid #ccc;
+    border-right: 1px solid #ccc;
+    border-bottom: 1px solid #ccc;
+    border-left: 0;
+  }
+}

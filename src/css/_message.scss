@@ -1,0 +1,19 @@
+.input_message {
+  position: absolute;
+  top: 2px;
+  left: 5px;
+  font-size: 12px;
+  color:red !important;
+}
+
+[id*=_contents] .input_message {
+  top: initial;
+  bottom: 0;
+  padding: 7px 12px;
+}
+
+.input_valide {
+  border: 1px solid #8cd453 !important; }
+
+.input_erreur {
+  border: 1px solid red !important; }

@@ -1,0 +1,32 @@
+.border-date{
+  position: relative;
+  margin-right: 15px;
+  font-weight: normal !important;
+  width: 145px;
+  height: 44px;
+  line-height: 1.42857143;
+  color: #555;
+  background-color: #fff;
+  background-image: none;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+}
+
+.date-separateur {font-size: 18px}
+.border-date input:focus{ outline: none;}
+.date-jm{
+  padding-left: 10px;
+  padding-top: 18px;
+  height: 42px;
+  width: 32px;
+  border: 0;
+}
+
+.date-j{ border-radius: 5px 0 0 5px;}
+.date-a{
+  height: 42px;
+  padding-top: 18px;
+  border: 0;
+  width: 50px;
+  border-radius: 0 4px 4px 0;
+}

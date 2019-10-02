@@ -1,0 +1,65 @@
+.ms-input {
+  display: flex;
+  align-items: center;
+  padding: 0 10px;
+  box-sizing: border-box;
+  position: relative;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  transition: padding-top linear 0.1s;
+
+  .caret {
+    position: absolute;
+    right: 10px;
+    top: 15px;
+  }
+}
+
+.ms-input.input_erreur {
+  padding-top: 12px ;
+
+  .multi-select-options {
+    border-top: 1px solid red;
+  }
+}
+
+.options-open {
+  border-radius: 4px 4px 0 0;
+}
+
+.ms-input:hover {
+  cursor: pointer;
+
+  .arrow-down {
+    border-top: 7px solid #6e6a6a;
+  }
+}
+
+.label-ms {
+  margin-left: 6px;
+}
+
+.multi-select-options {
+  position: absolute;
+  display: inline-block;
+  top: 41px;
+  left: -1px;
+  z-index: 1;
+  background-color: white;
+  width: 100%;
+  border: 1px solid #ccc;
+  border-radius: 0 0 4px 4px;
+
+  label {
+    width: 100%;
+    display: inline-block;
+  }
+}
+
+.arrow-down {
+  width: 0;
+  height: 0;
+  border-left: 7px solid transparent;
+  border-right: 7px solid transparent;
+  border-top: 7px solid #928e8e;
+}
