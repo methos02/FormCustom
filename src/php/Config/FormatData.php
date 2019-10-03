@@ -1,5 +1,5 @@
 <?php
-namespace App\Utils\FormCustom\Config;
+namespace FormCustom\Config;
 
 use Illuminate\Support\ViewErrorBag;
 class FormatData

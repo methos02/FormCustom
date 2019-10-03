@@ -1,7 +1,7 @@
 <?php
-namespace App\Utils\FormCustom\class_input;
+namespace FormCustom\class_input;
 
-use App\Utils\FormCustom\FormUtils;
+use FormCustom\FormUtils;
 
 class Select extends Input
 {

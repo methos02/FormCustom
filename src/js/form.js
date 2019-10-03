@@ -1,5 +1,8 @@
 /* Version 4.0 */
 //import des modules
+import '../css/formCustom.scss';
+import '../img/empty_img.png';
+import '../img/empty_video.png';
 import {insertErreur} from "./tools/insertErreur";
 import {getMessage} from "./tools/getMessage";
 import {verifInput} from "./tools/verifInput";
@@ -61,8 +64,7 @@ $(document).on('click', 'button[data-verif], input[type=submit][data-verif], a[d
     form.trigger('form_erreur');
 });
 
-function noStatut(input) {
-    return $(input).data('type').indexOf('multi') === -1 && checkStatut(input);
+function noStatut(input) { return $(input).data('type').indexOf('multi') === -1 && checkStatut(input);
 }
 
 function statutMultiInput(input) {

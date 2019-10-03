@@ -1,20 +1,20 @@
 <?php
-namespace App\Utils\FormCustom;
+namespace FormCustom;
 
-use App\Utils\FormCustom\Config\FormatData;
-use App\Utils\FormCustom\class_input\Checkbox;
-use App\Utils\FormCustom\class_input\Datalist;
-use App\Utils\FormCustom\class_input\Date;
-use App\Utils\FormCustom\class_input\Heure;
-use App\Utils\FormCustom\class_input\File;
-use App\Utils\FormCustom\class_input\Img_cropper;
-use App\Utils\FormCustom\class_input\Input;
-use App\Utils\FormCustom\class_input\Mdp;
-use App\Utils\FormCustom\class_input\MdpConfirm;
-use App\Utils\FormCustom\class_input\MultiSelect;
-use App\Utils\FormCustom\class_input\Password;
-use App\Utils\FormCustom\class_input\Select;
-use App\Utils\FormCustom\class_input\Text;
+use FormCustom\Config\FormatData;
+use FormCustom\class_input\Checkbox;
+use FormCustom\class_input\Datalist;
+use FormCustom\class_input\Date;
+use FormCustom\class_input\Heure;
+use FormCustom\class_input\File;
+use FormCustom\class_input\Img_cropper;
+use FormCustom\class_input\Input;
+use FormCustom\class_input\Mdp;
+use FormCustom\class_input\MdpConfirm;
+use FormCustom\class_input\MultiSelect;
+use FormCustom\class_input\Password;
+use FormCustom\class_input\Select;
+use FormCustom\class_input\Text;
 
 class FormCustom
 {

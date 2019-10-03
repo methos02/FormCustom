@@ -1,5 +1,5 @@
 <?php
-namespace App\Utils\FormCustom;
+namespace FormCustom;
 
 class FormUtils
 {

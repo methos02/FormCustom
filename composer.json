@@ -1,0 +1,19 @@
+{
+    "name": "methos/form-custom",
+    "description": "form manager",
+    "authors": [
+        {
+            "name": "Methos02",
+            "email": "methos_02@gmx.fr"
+        }
+    ],
+    "minimum-stability": "dev",
+    "require": {
+        "php": ">=7.0"
+    },
+    "autoload": {
+        "psr-4": {
+            "FormCustom\\" : "src/php"
+        }
+    }
+}
