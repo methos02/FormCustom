@@ -1,17 +1,10 @@
 <?php
-namespace FormCustom\Config;
+namespace FormCustom;
 
-use Illuminate\Support\ViewErrorBag;
 class FormatData
 {
-    public static function formatError(ViewErrorBag $arrayError) {
-        $array = [];
-
-        foreach($arrayError->getMessages() as $key => $message) {
-            $array[$key] = $message[0];
-        }
-
-        return $array;
+    public static function formatError($errors) {
+        return $errors;
     }
 
     public static function formatData($datas, $old) {

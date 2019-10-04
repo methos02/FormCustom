@@ -81,10 +81,42 @@
 /******/
 /******/
 /******/ 	// Load entry module and return exports
-/******/ 	return __webpack_require__(__webpack_require__.s = "./src/js/form.js");
+/******/ 	return __webpack_require__(__webpack_require__.s = "./public/js/app.js");
 /******/ })
 /************************************************************************/
 /******/ ({
+
+/***/ "./config/js/custom_test.js":
+/*!**********************************!*\
+  !*** ./config/js/custom_test.js ***!
+  \**********************************/
+/*! exports provided: tests */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* WEBPACK VAR INJECTION */(function($) {/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "tests", function() { return tests; });
+let tests = {
+  'video_cat': {
+    'test': function (input) {
+      let free_cat_id = ['1'];
+      let free_cat = false;
+      let paye_cat = false;
+      $.each(input.checkboxs, function (index, checkbox) {
+        if (!$(checkbox).is(':checked')) {
+          return true;
+        }
+
+        free_cat_id.indexOf($(checkbox).val()) !== -1 ? free_cat = true : paye_cat = true;
+      });
+      return !(free_cat === true && paye_cat === true);
+    },
+    'message': "Payantes et gratuites sélectionnées."
+  }
+};
+/* WEBPACK VAR INJECTION */}.call(this, __webpack_require__(/*! jquery */ "./node_modules/jquery/dist/jquery.js")))
+
+/***/ }),
 
 /***/ "./node_modules/cropperjs/dist/cropper.js":
 /*!************************************************!*\
@@ -15279,74 +15311,67 @@ var Picker = function () {
 
 /***/ }),
 
-/***/ "./src/css/formCustom.scss":
-/*!*********************************!*\
-  !*** ./src/css/formCustom.scss ***!
-  \*********************************/
-/*! no static exports found */
-/***/ (function(module, exports) {
-
-// removed by extract-text-webpack-plugin
-
-/***/ }),
-
-/***/ "./src/img/empty_img.png":
-/*!*******************************!*\
-  !*** ./src/img/empty_img.png ***!
-  \*******************************/
-/*! no static exports found */
-/***/ (function(module, exports) {
-
-module.exports = "../images/../images/empty_img.png";
-
-/***/ }),
-
-/***/ "./src/img/empty_video.png":
-/*!*********************************!*\
-  !*** ./src/img/empty_video.png ***!
-  \*********************************/
-/*! no static exports found */
-/***/ (function(module, exports) {
-
-module.exports = "../images/../images/empty_video.png";
-
-/***/ }),
-
-/***/ "./src/js/config/custom_test.js":
-/*!**************************************!*\
-  !*** ./src/js/config/custom_test.js ***!
-  \**************************************/
-/*! exports provided: tests */
+/***/ "./public/js/app.js":
+/*!**************************!*\
+  !*** ./public/js/app.js ***!
+  \**************************/
+/*! no exports provided */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
 __webpack_require__.r(__webpack_exports__);
-/* WEBPACK VAR INJECTION */(function($) {/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "tests", function() { return tests; });
-let tests = {
-  'video_cat': {
-    'test': function (input) {
-      let free_cat_id = ['1'];
-      let free_cat = false;
-      let paye_cat = false;
-      $.each(input.checkboxs, function (index, checkbox) {
-        if (!$(checkbox).is(':checked')) {
-          return true;
-        }
+/* harmony import */ var _src_js_form__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ../../src/js/form */ "./src/js/form.js");
+/* harmony import */ var _video_manage__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./video_manage */ "./public/js/video_manage.js");
 
-        free_cat_id.indexOf($(checkbox).val()) !== -1 ? free_cat = true : paye_cat = true;
-      });
-      return !(free_cat === true && paye_cat === true);
-    },
-    'message': "Payantes et gratuites sélectionnées."
+
+
+/***/ }),
+
+/***/ "./public/js/video_manage.js":
+/*!***********************************!*\
+  !*** ./public/js/video_manage.js ***!
+  \***********************************/
+/*! no exports provided */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* WEBPACK VAR INJECTION */(function($) {/* harmony import */ var _src_js_global_function__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ../../src/js/global_function */ "./src/js/global_function.js");
+
+$(document).on('custom_valide custom_erreur', 'input[name*=video_categories_id]', function (e) {
+  let hide = e.type === 'custom_erreur' || isFree();
+  let $prix = $('input[name=prix]');
+  let $preview = $('input[name=preview]');
+  toggle_input($prix, hide);
+  toggle_input($preview, hide);
+
+  if (hide === true) {
+    $prix.val('');
+    _src_js_global_function__WEBPACK_IMPORTED_MODULE_0__["FormCustom"].resetFile($preview);
   }
-};
+});
+
+function toggle_input($input, hide) {
+  let class_ = $input.data('type') === 'file' ? '.file-compact' : '.label-compact';
+  $input.closest(class_).toggle(!hide);
+  _src_js_global_function__WEBPACK_IMPORTED_MODULE_0__["FormCustom"].external_init($input);
+  $input.attr('data-obliger', function () {
+    return hide === true ? null : 1;
+  });
+}
+
+function isFree() {
+  let $checkboxs = $('input[name*=video_categories_id]:checked');
+  let free_cat_id = ['1'];
+  return free_cat_id.indexOf($($checkboxs[0]).val()) !== -1;
+}
 /* WEBPACK VAR INJECTION */}.call(this, __webpack_require__(/*! jquery */ "./node_modules/jquery/dist/jquery.js")))
 
 /***/ }),
 
-/***/ "./src/js/config/fileType.js":
+/***/ "./src/config/js/fileType.js":
 /*!***********************************!*\
-  !*** ./src/js/config/fileType.js ***!
+  !*** ./src/config/js/fileType.js ***!
   \***********************************/
 /*! exports provided: fileType */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
@@ -15365,9 +15390,9 @@ let fileType = {
 
 /***/ }),
 
-/***/ "./src/js/config/filesParam.js":
+/***/ "./src/config/js/filesParam.js":
 /*!*************************************!*\
-  !*** ./src/js/config/filesParam.js ***!
+  !*** ./src/config/js/filesParam.js ***!
   \*************************************/
 /*! exports provided: filesParam */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
@@ -15401,9 +15426,9 @@ let filesParam = {
 
 /***/ }),
 
-/***/ "./src/js/config/message.js":
+/***/ "./src/config/js/message.js":
 /*!**********************************!*\
-  !*** ./src/js/config/message.js ***!
+  !*** ./src/config/js/message.js ***!
   \**********************************/
 /*! exports provided: msgErreur */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
@@ -15544,9 +15569,9 @@ let msgErreur = {
 
 /***/ }),
 
-/***/ "./src/js/config/regex.js":
+/***/ "./src/config/js/regex.js":
 /*!********************************!*\
-  !*** ./src/js/config/regex.js ***!
+  !*** ./src/config/js/regex.js ***!
   \********************************/
 /*! exports provided: regexList */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
@@ -15571,6 +15596,39 @@ let regexList = {
   titre: /^[a-zA-Z0-9À-ÿ\s'\-_()./:,?!"]{0,80}$/,
   ville: /^[a-zA-ZÀ-ÿ._\s-]{0,40}$/
 };
+
+/***/ }),
+
+/***/ "./src/css/formCustom.scss":
+/*!*********************************!*\
+  !*** ./src/css/formCustom.scss ***!
+  \*********************************/
+/*! no static exports found */
+/***/ (function(module, exports) {
+
+// removed by extract-text-webpack-plugin
+
+/***/ }),
+
+/***/ "./src/img/empty_img.png":
+/*!*******************************!*\
+  !*** ./src/img/empty_img.png ***!
+  \*******************************/
+/*! no static exports found */
+/***/ (function(module, exports) {
+
+module.exports = "../images/../images/empty_img.png";
+
+/***/ }),
+
+/***/ "./src/img/empty_video.png":
+/*!*********************************!*\
+  !*** ./src/img/empty_video.png ***!
+  \*********************************/
+/*! no static exports found */
+/***/ (function(module, exports) {
+
+module.exports = "../images/../images/empty_video.png";
 
 /***/ }),
 
@@ -15623,7 +15681,7 @@ let regexList = {
 "use strict";
 __webpack_require__.r(__webpack_exports__);
 /* WEBPACK VAR INJECTION */(function($) {/* harmony import */ var vanilla_picker__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! vanilla-picker */ "./node_modules/vanilla-picker/dist/vanilla-picker.mjs");
-/* harmony import */ var _config_regex__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ../config/regex */ "./src/js/config/regex.js");
+/* harmony import */ var _config_js_regex__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ../../config/js/regex */ "./src/config/js/regex.js");
 
 
 let els = document.querySelectorAll('[data-action=color_picker]');
@@ -15650,7 +15708,7 @@ els.forEach(function (el) {
     onOpen(color) {
       let input = $(this.domElement).closest('[data-action=color_picker]').siblings('input[data-type=colorpicker]');
       let newColor = input.val();
-      let regex = new RegExp(_config_regex__WEBPACK_IMPORTED_MODULE_1__["regexList"]['colorpicker']);
+      let regex = new RegExp(_config_js_regex__WEBPACK_IMPORTED_MODULE_1__["regexList"]['colorpicker']);
       open = false;
 
       if (regex.test(newColor)) {
@@ -16382,6 +16440,30 @@ function checkStatut(input) {
 
 /***/ }),
 
+/***/ "./src/js/global_function.js":
+/*!***********************************!*\
+  !*** ./src/js/global_function.js ***!
+  \***********************************/
+/*! exports provided: FormCustom */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "FormCustom", function() { return FormCustom; });
+/* harmony import */ var _tools_formTool_cleanForm__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./tools/formTool/cleanForm */ "./src/js/tools/formTool/cleanForm.js");
+/* harmony import */ var _tools_formTool_resetFile__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./tools/formTool/resetFile */ "./src/js/tools/formTool/resetFile.js");
+/* harmony import */ var _tools_init__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./tools/init */ "./src/js/tools/init.js");
+
+
+
+let FormCustom = {
+  cleanForm: _tools_formTool_cleanForm__WEBPACK_IMPORTED_MODULE_0__["cleanForm"],
+  resetFile: _tools_formTool_resetFile__WEBPACK_IMPORTED_MODULE_1__["resetFile"],
+  external_init: _tools_init__WEBPACK_IMPORTED_MODULE_2__["external_init"]
+};
+
+/***/ }),
+
 /***/ "./src/js/input/datalist.js":
 /*!**********************************!*\
   !*** ./src/js/input/datalist.js ***!
@@ -16633,8 +16715,8 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "fileParam", function() { return fileParam; });
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "initFile", function() { return initFile; });
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "validateFile", function() { return validateFile; });
-/* harmony import */ var _config_fileType__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ../config/fileType */ "./src/js/config/fileType.js");
-/* harmony import */ var _config_filesParam__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ../config/filesParam */ "./src/js/config/filesParam.js");
+/* harmony import */ var _config_js_fileType__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ../../config/js/fileType */ "./src/config/js/fileType.js");
+/* harmony import */ var _config_js_filesParam__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ../../config/js/filesParam */ "./src/config/js/filesParam.js");
 
 
 let PATH_APPERCU = {
@@ -16650,11 +16732,11 @@ function verifFile(input) {
     return 'size';
   }
 
-  if (_config_fileType__WEBPACK_IMPORTED_MODULE_0__["fileType"][input.extention] === undefined) {
+  if (_config_js_fileType__WEBPACK_IMPORTED_MODULE_0__["fileType"][input.extention] === undefined) {
     return 'datatype';
   }
 
-  if (_config_fileType__WEBPACK_IMPORTED_MODULE_0__["fileType"][input.extention].indexOf(input.file.type) === -1) {
+  if (_config_js_fileType__WEBPACK_IMPORTED_MODULE_0__["fileType"][input.extention].indexOf(input.file.type) === -1) {
     return 'type';
   }
 
@@ -16742,11 +16824,11 @@ function validateVideo(input) {
 }
 
 function getDefautFileParam(option) {
-  if (option === undefined || _config_filesParam__WEBPACK_IMPORTED_MODULE_1__["filesParam"][option] === undefined) {
-    return _config_filesParam__WEBPACK_IMPORTED_MODULE_1__["filesParam"].defaut;
+  if (option === undefined || _config_js_filesParam__WEBPACK_IMPORTED_MODULE_1__["filesParam"][option] === undefined) {
+    return _config_js_filesParam__WEBPACK_IMPORTED_MODULE_1__["filesParam"].defaut;
   }
 
-  return _config_filesParam__WEBPACK_IMPORTED_MODULE_1__["filesParam"][option];
+  return _config_js_filesParam__WEBPACK_IMPORTED_MODULE_1__["filesParam"][option];
 }
 
 /***/ }),
@@ -17048,17 +17130,91 @@ function defineParamInput(champ) {
 "use strict";
 __webpack_require__.r(__webpack_exports__);
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "exec_custom_test", function() { return exec_custom_test; });
-/* harmony import */ var _config_custom_test__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ../config/custom_test */ "./src/js/config/custom_test.js");
-/* harmony import */ var _config_message__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ../config/message */ "./src/js/config/message.js");
+/* harmony import */ var _config_js_custom_test__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ../../../config/js/custom_test */ "./config/js/custom_test.js");
+/* harmony import */ var _config_js_message__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ../../config/js/message */ "./src/config/js/message.js");
 
 
 function exec_custom_test(input) {
-  console.log('toutou');
-
-  if (_config_custom_test__WEBPACK_IMPORTED_MODULE_0__["tests"][input.custom].test(input) === false) {
-    _config_message__WEBPACK_IMPORTED_MODULE_1__["msgErreur"][input.type][input.custom + '_' + input.erreur] = _config_custom_test__WEBPACK_IMPORTED_MODULE_0__["tests"][input.custom].message;
+  if (_config_js_custom_test__WEBPACK_IMPORTED_MODULE_0__["tests"][input.custom].test(input) === false) {
+    _config_js_message__WEBPACK_IMPORTED_MODULE_1__["msgErreur"][input.type][input.custom + '_' + input.erreur] = _config_js_custom_test__WEBPACK_IMPORTED_MODULE_0__["tests"][input.custom].message;
     return input.custom;
   }
+}
+
+/***/ }),
+
+/***/ "./src/js/tools/formTool/cleanForm.js":
+/*!********************************************!*\
+  !*** ./src/js/tools/formTool/cleanForm.js ***!
+  \********************************************/
+/*! exports provided: cleanForm */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* WEBPACK VAR INJECTION */(function($) {/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "cleanForm", function() { return cleanForm; });
+function cleanForm($form, action, except) {
+  $form.find(':input').each(function () {
+    if ($.inArray($(this).attr('name'), except) !== -1) {
+      return;
+    }
+
+    if ($.inArray(action, 'empty') === -1) {
+      emptyForm($form, except);
+    }
+
+    if ($.inArray(action, 'disabled') === -1) {
+      $(this).attr('disabled', 'disabled');
+    }
+
+    if ($.inArray(action, 'enable') === -1) {
+      $(this).removeAttr('disabled');
+    }
+
+    if ($.inArray(action, 'init') === -1) {
+      $(this).trigger('init-input');
+    }
+  });
+}
+
+function emptyForm($form, except) {
+  $form.find(':input').each(function () {
+    let name = $(this).attr('name');
+    let $input = $(this);
+
+    if ($.inArray(name, except) === -1) {
+      $(this).val(function () {
+        console.log($input.is('select'), $input);
+        return $input.is('select') ? -1 : '';
+      });
+    }
+
+    if ($(this).is('textarea') && $('#compteur-' + name).length !== 0) {
+      $(this).trigger('update-compteur');
+    }
+
+    if ($(this).data('cropper') !== undefined) {
+      $('#appercu-' + name).attr('src', '/storage/cover/cover-vide.jpg');
+    }
+  });
+}
+/* WEBPACK VAR INJECTION */}.call(this, __webpack_require__(/*! jquery */ "./node_modules/jquery/dist/jquery.js")))
+
+/***/ }),
+
+/***/ "./src/js/tools/formTool/resetFile.js":
+/*!********************************************!*\
+  !*** ./src/js/tools/formTool/resetFile.js ***!
+  \********************************************/
+/*! exports provided: resetFile */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "resetFile", function() { return resetFile; });
+function resetFile($input) {
+  $input.wrap('<form>').closest('form').get(0).reset();
+  $input.unwrap();
 }
 
 /***/ }),
@@ -17073,8 +17229,8 @@ function exec_custom_test(input) {
 "use strict";
 __webpack_require__.r(__webpack_exports__);
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "getMessage", function() { return getMessage; });
-/* harmony import */ var _config_message__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ../config/message */ "./src/js/config/message.js");
-/* harmony import */ var _config_fileType__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ../config/fileType */ "./src/js/config/fileType.js");
+/* harmony import */ var _config_js_message__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ../../config/js/message */ "./src/config/js/message.js");
+/* harmony import */ var _config_js_fileType__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ../../config/js/fileType */ "./src/config/js/fileType.js");
 
 
 function getMessage(input, prefix) {
@@ -17083,11 +17239,11 @@ function getMessage(input, prefix) {
   }
 
   prefix = prefix === "" ? "" : prefix + "_";
-  input.erreur = input.erreur === undefined || _config_message__WEBPACK_IMPORTED_MODULE_0__["msgErreur"][input.type][prefix + input.erreur] === undefined ? "defaut" : input.erreur;
-  let message = _config_message__WEBPACK_IMPORTED_MODULE_0__["msgErreur"][input.type][prefix + input.erreur];
+  input.erreur = input.erreur === undefined || _config_js_message__WEBPACK_IMPORTED_MODULE_0__["msgErreur"][input.type][prefix + input.erreur] === undefined ? "defaut" : input.erreur;
+  let message = _config_js_message__WEBPACK_IMPORTED_MODULE_0__["msgErreur"][input.type][prefix + input.erreur];
 
-  if (input.extention !== undefined && _config_fileType__WEBPACK_IMPORTED_MODULE_1__["fileType"][input.extention] !== undefined && prefix === 'type_') {
-    message = message + _config_fileType__WEBPACK_IMPORTED_MODULE_1__["fileType"][input.extention].join(', ');
+  if (input.extention !== undefined && _config_js_fileType__WEBPACK_IMPORTED_MODULE_1__["fileType"][input.extention] !== undefined && prefix === 'type_') {
+    message = message + _config_js_fileType__WEBPACK_IMPORTED_MODULE_1__["fileType"][input.extention].join(', ');
   }
 
   return message;
@@ -17298,7 +17454,7 @@ function verifByType(input, event) {
 "use strict";
 __webpack_require__.r(__webpack_exports__);
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "verifInput", function() { return verifInput; });
-/* harmony import */ var _config_regex__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ../config/regex */ "./src/js/config/regex.js");
+/* harmony import */ var _config_js_regex__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ../../config/js/regex */ "./src/config/js/regex.js");
 /* harmony import */ var _defineParamInput__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./defineParamInput */ "./src/js/tools/defineParamInput.js");
 /* harmony import */ var _init__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./init */ "./src/js/tools/init.js");
 /* harmony import */ var _input_datalist__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ../input/datalist */ "./src/js/input/datalist.js");
@@ -17317,7 +17473,7 @@ let paternInput = ['iban', 'site', 'tel', 'colorpicker', 'mail'];
 function verifInput(champ, event) {
   let prefixe;
   let input = Object(_defineParamInput__WEBPACK_IMPORTED_MODULE_1__["defineParamInput"])(champ);
-  let regex = new RegExp(_config_regex__WEBPACK_IMPORTED_MODULE_0__["regexList"][input.type]);
+  let regex = new RegExp(_config_js_regex__WEBPACK_IMPORTED_MODULE_0__["regexList"][input.type]);
 
   if (input.type === 'datalist') {
     Object(_input_datalist__WEBPACK_IMPORTED_MODULE_3__["verifDatalist"])(input);

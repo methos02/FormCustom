@@ -4,7 +4,7 @@ const ExtractTextPlugin = require("extract-text-webpack-plugin");
 
 let config = {
     mode: 'development',
-    entry: "./src/js/form.js",
+    entry: "./public/js/app",
     watch: true,
     output: {
         path: path.resolve(__dirname, "./public/js"),

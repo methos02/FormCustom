@@ -1,7 +1,6 @@
 <?php
 namespace FormCustom;
 
-use FormCustom\Config\FormatData;
 use FormCustom\class_input\Checkbox;
 use FormCustom\class_input\Datalist;
 use FormCustom\class_input\Date;
@@ -24,8 +23,8 @@ class FormCustom
     static protected $values;
 
     public static function open($name, $options = []) {
-        if (empty(self::$config)) { self::$config = include(__DIR__ . '/Config/config.php'); }
-        if (empty(self::$const)) { self::$const = include(__DIR__ . '/Config/constante.php'); }
+        if (empty(self::$config)) { self::$config = include(__DIR__ . '/../config/php/config.php'); }
+        if (empty(self::$const)) { self::$const = include(__DIR__ . '/../config/php/constante.php'); }
         if (!empty($options['errors'])) {self::$errors = FormatData::formatError($options['errors']);}
         self::$values = FormatData::formatData($options['data'] ?? [], $options['old'] ?? []);
 
