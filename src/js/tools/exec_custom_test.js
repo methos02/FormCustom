@@ -1,5 +1,5 @@
-import {tests} from "../config/custom_test";
-import {msgErreur} from "../config/message";
+import {tests} from "../../config/js/custom_test";
+import {msgErreur} from "../../config/js/message";
 
 export function exec_custom_test(input) {
     console.log('toutou');

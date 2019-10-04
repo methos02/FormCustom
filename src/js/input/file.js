@@ -1,5 +1,5 @@
-import {fileType} from "../config/fileType";
-import {filesParam} from "../config/filesParam";
+import {fileType} from "../../config/js/fileType";
+import {filesParam} from "../../config/js/filesParam";
 
 let PATH_APPERCU = {'img' : '/img/empty_img.png', 'video': '/img/empty_video.png'};
 

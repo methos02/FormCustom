@@ -1,5 +1,5 @@
-import {msgErreur} from "../config/message";
-import {fileType} from "../config/fileType";
+import {msgErreur} from "../../config/js/message";
+import {fileType} from "../../config/js/fileType";
 
 export function getMessage(input, prefix) {
     if(prefix === false) {return "";}
