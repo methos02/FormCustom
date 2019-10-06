@@ -1,4 +1,4 @@
-import {regexList} from "../../config/js/regex";
+import {regexList} from "../../config/formcustom/js/regex";
 
 import {defineParamInput} from "./defineParamInput";
 import {initialisation} from "./init";

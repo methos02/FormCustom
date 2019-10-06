@@ -1,5 +1,5 @@
 import Picker from 'vanilla-picker';
-import {regexList} from "../../config/js/regex";
+import {regexList} from "../../config/formcustom/js/regex";
 
 let els = document.querySelectorAll('[data-action=color_picker]');
 let pickers = [];

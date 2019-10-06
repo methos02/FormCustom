@@ -1,5 +1,5 @@
-import {tests} from "../../../config/js/custom_test";
-import {msgErreur} from "../../config/js/message";
+import {tests} from "../../../config/formcustom/js/custom_test";
+import {msgErreur} from "../../config/formcustom/js/message";
 
 export function exec_custom_test(input) {
     if(tests[input.custom].test(input) === false) {
