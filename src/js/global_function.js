@@ -10,6 +10,6 @@ export let FormCustom = {
     resetFile : resetFile,
     external_init : external_init,
     insertErreur : insertErreur,
-    hydraForm : hydrateForm,
+    hydrateForm : hydrateForm,
     defineParamInput : defineParamInput
 };
