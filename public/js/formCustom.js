@@ -86,10 +86,10 @@
 /************************************************************************/
 /******/ ({
 
-/***/ "./config/js/custom_test.js":
-/*!**********************************!*\
-  !*** ./config/js/custom_test.js ***!
-  \**********************************/
+/***/ "./config/formcustom/js/custom_test.js":
+/*!*********************************************!*\
+  !*** ./config/formcustom/js/custom_test.js ***!
+  \*********************************************/
 /*! exports provided: tests */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
@@ -115,6 +115,170 @@ let tests = {
   }
 };
 /* WEBPACK VAR INJECTION */}.call(this, __webpack_require__(/*! jquery */ "./node_modules/jquery/dist/jquery.js")))
+
+/***/ }),
+
+/***/ "./config/formcustom/js/fileType.js":
+/*!******************************************!*\
+  !*** ./config/formcustom/js/fileType.js ***!
+  \******************************************/
+/*! exports provided: fileType */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "fileType", function() { return fileType; });
+let fileType = {
+  'img': ["image/jpg", "image/jpeg", "image/bmp", "image/gif", "image/png"],
+  'webimg': ["image/jpg", "image/jpeg"],
+  'photo': ["image/jpg", "image/jpeg"],
+  'pdf': ["application/pdf"],
+  'video': ["video/webm", "video/ogg", "video/mp4"],
+  'webvideo': ["video/mp4"]
+};
+
+/***/ }),
+
+/***/ "./config/formcustom/js/message.js":
+/*!*****************************************!*\
+  !*** ./config/formcustom/js/message.js ***!
+  \*****************************************/
+/*! exports provided: msgErreur */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "msgErreur", function() { return msgErreur; });
+let msgErreur = {
+  colorpicker: {
+    "defaut": "Couleur invalide.",
+    "empty_defaut": "Couleur requise."
+  },
+  cp: {
+    "defaut": "Le code postale est invalide.",
+    "empty_defaut": "Code postale requit."
+  },
+  date: {
+    "defaut": "La date contient des caractères invalide.",
+    "empty_defaut": "Date requise.",
+    "jour_defaut": "Le jour est incorrecte.",
+    "mois_defaut": "Le mois est incorrecte.",
+    "futur_defaut": "La date doit être dans le futur.",
+    "scolaire_defaut": "Date hors saison.",
+    "passe_defaut": "La date doit être dans le passé.",
+    "coherence_defaut": "Date incorrecte.",
+    "birth": "Votre date d'anniversaire contient des caractères invalide.",
+    "passe_birth": "Votre date d'anniversaire doit être dans le passé.",
+    "coherence_birth": "Votre date d'anniversaire n'est pas cohérente"
+  },
+  dataList: {
+    "empty_defaut": "Champ requit.",
+    "empty_piscine": "Lieu de la compétition requis.",
+    "unfound_defaut": "Donnée introuvable.",
+    "unfound_piscine": "Aucune piscine trouvée.",
+    "false_defaut": "Ce champs contient des caractères invalides.",
+    "false_piscine": "Nom de piscine invalide."
+  },
+  file: {
+    'empty_defaut': 'Fichier requit.',
+    'size_defaut': 'Le fichier est trop volumineux.',
+    'type_defaut': 'Type du fichier invalide, type autorisé : ',
+    'datatype_defaut': "Erreur d'input."
+  },
+  heure: {
+    "defaut": "Heure invalide.",
+    "empty_defaut": "Heure non précisée.",
+    "obliger_defaut": "Heure requise."
+  },
+  iban: {
+    'empty_defaut': "L'iban doit être rempli.",
+    'defaut': "L'iban contient des caractères invalides."
+  },
+  img: {
+    'sizeMax_defaut': "Les dimensions de l'image sont trop grande.",
+    'sizeMin_defaut': "Les dimensions de l'image sont trop petite.",
+    'carre_defaut': "L'image doit un carré.",
+    'cover_defaut': "L'image ne respecte pas la proportion 8/5."
+  },
+  licence: {
+    "defaut": "Le numéro de licence contient des caractères invalides."
+  },
+  mail: {
+    "empty_defaut": "L'adresse mail doit être indiquée.",
+    "empty2_defaut": "La confirmation de l'adresse mail doit être indiquée.",
+    "defaut": "L'adresse mail est invalide.",
+    "different_defaut": 'Les adresses mails sont différentes.',
+    "2_defaut": "La confirmation de l'adresse mail est invalide."
+  },
+  mdp: {
+    "empty_defaut": "Mot de passe requit.",
+    "empty_confirm": "Confirmation requise.",
+    "defaut": "Le mot de passe contient des caractères invalides.",
+    "defaut_confirm": "La confirmation du mot de passe contient des caractères invalides.",
+    "different_defaut": "Les mots de passe sont différents.",
+    "length_defaut": "Le mot de passe doit comporter minimum 6 caractères."
+  },
+  multiselect: {
+    'empty_defaut': "Champs requit.",
+    'empty_categorie': 'Catégories requise.'
+  },
+  nom: {
+    'empty_defaut': "Nom requit.",
+    'defaut': "Le nom contient des caractères invalides.",
+    'empty_nom': "Votre nom doit être rempli.",
+    'nom': "Votre nom contient des caractères invalides.",
+    'empty_prenom': "Prénom requit.",
+    'prenom': "Votre prénom contient des caractères invalides.",
+    'empty_banque': "Le nom de votre banque doit être rempli.",
+    'empty_nationalite': "Nationalité requise.",
+    'banque': "Le nom de votre banque contient des caractères invalides."
+  },
+  numb: {
+    'defaut': "Le nombre est invalide.",
+    'prix': "Le prix est invalide."
+  },
+  numb_rue: {
+    "defaut": "Le numéro de la rue est invalide."
+  },
+  rue: {
+    "defaut": "Le nom de la rue contient des caractères invalides.",
+    "empty_defaut": "Nom de rue requit."
+  },
+  select: {
+    "defaut": "Veuillez remplir ce select."
+  },
+  site: {
+    "defaut": "L'adresse du site est invalides.",
+    "empty_defaut": "Adresse du site requise."
+  },
+  tel: {
+    "defaut": "Téléphone invalide."
+  },
+  texte: {
+    "defaut": "Vous devez introduire un texte.",
+    "empty_defaut": "Vous devez introduire un texte.",
+    "length_defaut": "Le texte est trop long",
+    "chapitre": "Vous n'avez pas complété votre chapitre.",
+    "resume": "Vous n'avez pas complété votre résumé.",
+    "length_resume": "Votre résumé est trop long"
+  },
+  titre: {
+    'empty_defaut': "Le titre doit être rempli.",
+    'defaut': "Le titre contient des caractères invalides.",
+    'empty_pseudo': "Votre pseudo doit être rempli.",
+    'pseudo': "Votre pseudo contient des caractères invalides.",
+    'empty_intitule': "L'intitule de votre mail doit être rempli.",
+    'intitule': "L'intitule de votre mail contient des caractères invalides.",
+    'empty_roman': "Le titre du roman doit être rempli.",
+    'roman': "Le titre du roman contient des caractères invalides.",
+    'empty_chapitre': "Le titre du chapitre doit être rempli.",
+    'chapitre': "Le titre du chapitre contient des caractères invalides."
+  },
+  ville: {
+    "defaut": "La ville est invalides.",
+    "empty_defaut": "Ville requise."
+  }
+};
 
 /***/ }),
 
@@ -15369,10 +15533,10 @@ function isFree() {
 
 /***/ }),
 
-/***/ "./src/config/js/fileType.js":
-/*!***********************************!*\
-  !*** ./src/config/js/fileType.js ***!
-  \***********************************/
+/***/ "./src/config/formcustom/js/fileType.js":
+/*!**********************************************!*\
+  !*** ./src/config/formcustom/js/fileType.js ***!
+  \**********************************************/
 /*! exports provided: fileType */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
@@ -15390,10 +15554,10 @@ let fileType = {
 
 /***/ }),
 
-/***/ "./src/config/js/filesParam.js":
-/*!*************************************!*\
-  !*** ./src/config/js/filesParam.js ***!
-  \*************************************/
+/***/ "./src/config/formcustom/js/filesParam.js":
+/*!************************************************!*\
+  !*** ./src/config/formcustom/js/filesParam.js ***!
+  \************************************************/
 /*! exports provided: filesParam */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
@@ -15426,153 +15590,10 @@ let filesParam = {
 
 /***/ }),
 
-/***/ "./src/config/js/message.js":
-/*!**********************************!*\
-  !*** ./src/config/js/message.js ***!
-  \**********************************/
-/*! exports provided: msgErreur */
-/***/ (function(module, __webpack_exports__, __webpack_require__) {
-
-"use strict";
-__webpack_require__.r(__webpack_exports__);
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "msgErreur", function() { return msgErreur; });
-let msgErreur = {
-  colorpicker: {
-    "defaut": "Couleur invalide.",
-    "empty_defaut": "Couleur requise."
-  },
-  cp: {
-    "defaut": "Le code postale est invalide.",
-    "empty_defaut": "Code postale requit."
-  },
-  date: {
-    "defaut": "La date contient des caractères invalide.",
-    "empty_defaut": "Date requise.",
-    "jour_defaut": "Le jour est incorrecte.",
-    "mois_defaut": "Le mois est incorrecte.",
-    "futur_defaut": "La date doit être dans le futur.",
-    "scolaire_defaut": "Date hors saison.",
-    "passe_defaut": "La date doit être dans le passé.",
-    "coherence_defaut": "Date incorrecte.",
-    "birth": "Votre date d'anniversaire contient des caractères invalide.",
-    "passe_birth": "Votre date d'anniversaire doit être dans le passé.",
-    "coherence_birth": "Votre date d'anniversaire n'est pas cohérente"
-  },
-  dataList: {
-    "empty_defaut": "Champ requit.",
-    "empty_piscine": "Lieu de la compétition requis.",
-    "unfound_defaut": "Donnée introuvable.",
-    "unfound_piscine": "Aucune piscine trouvée.",
-    "false_defaut": "Ce champs contient des caractères invalides.",
-    "false_piscine": "Nom de piscine invalide."
-  },
-  file: {
-    'empty_defaut': 'Fichier requit.',
-    'size_defaut': 'Le fichier est trop volumineux.',
-    'type_defaut': 'Type du fichier invalide, type autorisé : ',
-    'datatype_defaut': "Erreur d'input."
-  },
-  heure: {
-    "defaut": "Heure invalide.",
-    "empty_defaut": "Heure non précisée.",
-    "obliger_defaut": "Heure requise."
-  },
-  iban: {
-    'empty_defaut': "L'iban doit être rempli.",
-    'defaut': "L'iban contient des caractères invalides."
-  },
-  img: {
-    'sizeMax_defaut': "Les dimensions de l'image sont trop grande.",
-    'sizeMin_defaut': "Les dimensions de l'image sont trop petite.",
-    'carre_defaut': "L'image doit un carré.",
-    'cover_defaut': "L'image ne respecte pas la proportion 8/5."
-  },
-  licence: {
-    "defaut": "Le numéro de licence contient des caractères invalides."
-  },
-  mail: {
-    "empty_defaut": "L'adresse mail doit être indiquée.",
-    "empty2_defaut": "La confirmation de l'adresse mail doit être indiquée.",
-    "defaut": "L'adresse mail est invalide.",
-    "different_defaut": 'Les adresses mails sont différentes.',
-    "2_defaut": "La confirmation de l'adresse mail est invalide."
-  },
-  mdp: {
-    "empty_defaut": "Mot de passe requit.",
-    "empty_confirm": "Confirmation requise.",
-    "defaut": "Le mot de passe contient des caractères invalides.",
-    "defaut_confirm": "La confirmation du mot de passe contient des caractères invalides.",
-    "different_defaut": "Les mots de passe sont différents.",
-    "length_defaut": "Le mot de passe doit comporter minimum 6 caractères."
-  },
-  multiselect: {
-    'empty_defaut': "Champs requit.",
-    'empty_categorie': 'Catégories requise.'
-  },
-  nom: {
-    'empty_defaut': "Nom requit.",
-    'defaut': "Le nom contient des caractères invalides.",
-    'empty_nom': "Votre nom doit être rempli.",
-    'nom': "Votre nom contient des caractères invalides.",
-    'empty_prenom': "Prénom requit.",
-    'prenom': "Votre prénom contient des caractères invalides.",
-    'empty_banque': "Le nom de votre banque doit être rempli.",
-    'empty_nationalite': "Nationalité requise.",
-    'banque': "Le nom de votre banque contient des caractères invalides."
-  },
-  numb: {
-    'defaut': "Le nombre est invalide.",
-    'prix': "Le prix est invalide."
-  },
-  numb_rue: {
-    "defaut": "Le numéro de la rue est invalide."
-  },
-  rue: {
-    "defaut": "Le nom de la rue contient des caractères invalides.",
-    "empty_defaut": "Nom de rue requit."
-  },
-  select: {
-    "defaut": "Veuillez remplir ce select."
-  },
-  site: {
-    "defaut": "L'adresse du site est invalides.",
-    "empty_defaut": "Adresse du site requise."
-  },
-  tel: {
-    "defaut": "Téléphone invalide."
-  },
-  texte: {
-    "defaut": "Vous devez introduire un texte.",
-    "empty_defaut": "Vous devez introduire un texte.",
-    "length_defaut": "Le texte est trop long",
-    "chapitre": "Vous n'avez pas complété votre chapitre.",
-    "resume": "Vous n'avez pas complété votre résumé.",
-    "length_resume": "Votre résumé est trop long"
-  },
-  titre: {
-    'empty_defaut': "Le titre doit être rempli.",
-    'defaut': "Le titre contient des caractères invalides.",
-    'empty_pseudo': "Votre pseudo doit être rempli.",
-    'pseudo': "Votre pseudo contient des caractères invalides.",
-    'empty_intitule': "L'intitule de votre mail doit être rempli.",
-    'intitule': "L'intitule de votre mail contient des caractères invalides.",
-    'empty_roman': "Le titre du roman doit être rempli.",
-    'roman': "Le titre du roman contient des caractères invalides.",
-    'empty_chapitre': "Le titre du chapitre doit être rempli.",
-    'chapitre': "Le titre du chapitre contient des caractères invalides."
-  },
-  ville: {
-    "defaut": "La ville est invalides.",
-    "empty_defaut": "Ville requise."
-  }
-};
-
-/***/ }),
-
-/***/ "./src/config/js/regex.js":
-/*!********************************!*\
-  !*** ./src/config/js/regex.js ***!
-  \********************************/
+/***/ "./src/config/formcustom/js/regex.js":
+/*!*******************************************!*\
+  !*** ./src/config/formcustom/js/regex.js ***!
+  \*******************************************/
 /*! exports provided: regexList */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
@@ -15681,7 +15702,7 @@ module.exports = "../images/../images/empty_video.png";
 "use strict";
 __webpack_require__.r(__webpack_exports__);
 /* WEBPACK VAR INJECTION */(function($) {/* harmony import */ var vanilla_picker__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! vanilla-picker */ "./node_modules/vanilla-picker/dist/vanilla-picker.mjs");
-/* harmony import */ var _config_js_regex__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ../../config/js/regex */ "./src/config/js/regex.js");
+/* harmony import */ var _config_formcustom_js_regex__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ../../config/formcustom/js/regex */ "./src/config/formcustom/js/regex.js");
 
 
 let els = document.querySelectorAll('[data-action=color_picker]');
@@ -15708,7 +15729,7 @@ els.forEach(function (el) {
     onOpen(color) {
       let input = $(this.domElement).closest('[data-action=color_picker]').siblings('input[data-type=colorpicker]');
       let newColor = input.val();
-      let regex = new RegExp(_config_js_regex__WEBPACK_IMPORTED_MODULE_1__["regexList"]['colorpicker']);
+      let regex = new RegExp(_config_formcustom_js_regex__WEBPACK_IMPORTED_MODULE_1__["regexList"]['colorpicker']);
       open = false;
 
       if (regex.test(newColor)) {
@@ -16453,13 +16474,22 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _tools_formTool_cleanForm__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./tools/formTool/cleanForm */ "./src/js/tools/formTool/cleanForm.js");
 /* harmony import */ var _tools_formTool_resetFile__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./tools/formTool/resetFile */ "./src/js/tools/formTool/resetFile.js");
 /* harmony import */ var _tools_init__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./tools/init */ "./src/js/tools/init.js");
+/* harmony import */ var _tools_insertErreur__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ./tools/insertErreur */ "./src/js/tools/insertErreur.js");
+/* harmony import */ var _tools_formTool_hydrateForm__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ./tools/formTool/hydrateForm */ "./src/js/tools/formTool/hydrateForm.js");
+/* harmony import */ var _tools_defineParamInput__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ./tools/defineParamInput */ "./src/js/tools/defineParamInput.js");
+
+
+
 
 
 
 let FormCustom = {
   cleanForm: _tools_formTool_cleanForm__WEBPACK_IMPORTED_MODULE_0__["cleanForm"],
   resetFile: _tools_formTool_resetFile__WEBPACK_IMPORTED_MODULE_1__["resetFile"],
-  external_init: _tools_init__WEBPACK_IMPORTED_MODULE_2__["external_init"]
+  external_init: _tools_init__WEBPACK_IMPORTED_MODULE_2__["external_init"],
+  insertErreur: _tools_insertErreur__WEBPACK_IMPORTED_MODULE_3__["insertErreur"],
+  hydrateForm: _tools_formTool_hydrateForm__WEBPACK_IMPORTED_MODULE_4__["hydrateForm"],
+  defineParamInput: _tools_defineParamInput__WEBPACK_IMPORTED_MODULE_5__["defineParamInput"]
 };
 
 /***/ }),
@@ -16715,8 +16745,8 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "fileParam", function() { return fileParam; });
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "initFile", function() { return initFile; });
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "validateFile", function() { return validateFile; });
-/* harmony import */ var _config_js_fileType__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ../../config/js/fileType */ "./src/config/js/fileType.js");
-/* harmony import */ var _config_js_filesParam__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ../../config/js/filesParam */ "./src/config/js/filesParam.js");
+/* harmony import */ var _config_formcustom_js_fileType__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ../../config/formcustom/js/fileType */ "./src/config/formcustom/js/fileType.js");
+/* harmony import */ var _config_formcustom_js_filesParam__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ../../config/formcustom/js/filesParam */ "./src/config/formcustom/js/filesParam.js");
 
 
 let PATH_APPERCU = {
@@ -16732,11 +16762,11 @@ function verifFile(input) {
     return 'size';
   }
 
-  if (_config_js_fileType__WEBPACK_IMPORTED_MODULE_0__["fileType"][input.extention] === undefined) {
+  if (_config_formcustom_js_fileType__WEBPACK_IMPORTED_MODULE_0__["fileType"][input.extention] === undefined) {
     return 'datatype';
   }
 
-  if (_config_js_fileType__WEBPACK_IMPORTED_MODULE_0__["fileType"][input.extention].indexOf(input.file.type) === -1) {
+  if (_config_formcustom_js_fileType__WEBPACK_IMPORTED_MODULE_0__["fileType"][input.extention].indexOf(input.file.type) === -1) {
     return 'type';
   }
 
@@ -16824,11 +16854,11 @@ function validateVideo(input) {
 }
 
 function getDefautFileParam(option) {
-  if (option === undefined || _config_js_filesParam__WEBPACK_IMPORTED_MODULE_1__["filesParam"][option] === undefined) {
-    return _config_js_filesParam__WEBPACK_IMPORTED_MODULE_1__["filesParam"].defaut;
+  if (option === undefined || _config_formcustom_js_filesParam__WEBPACK_IMPORTED_MODULE_1__["filesParam"][option] === undefined) {
+    return _config_formcustom_js_filesParam__WEBPACK_IMPORTED_MODULE_1__["filesParam"].defaut;
   }
 
-  return _config_js_filesParam__WEBPACK_IMPORTED_MODULE_1__["filesParam"][option];
+  return _config_formcustom_js_filesParam__WEBPACK_IMPORTED_MODULE_1__["filesParam"][option];
 }
 
 /***/ }),
@@ -17130,13 +17160,13 @@ function defineParamInput(champ) {
 "use strict";
 __webpack_require__.r(__webpack_exports__);
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "exec_custom_test", function() { return exec_custom_test; });
-/* harmony import */ var _config_js_custom_test__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ../../../config/js/custom_test */ "./config/js/custom_test.js");
-/* harmony import */ var _config_js_message__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ../../config/js/message */ "./src/config/js/message.js");
+/* harmony import */ var formcustom_js_custom_test__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! formcustom/js/custom_test */ "./config/formcustom/js/custom_test.js");
+/* harmony import */ var formcustom_js_message__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! formcustom/js/message */ "./config/formcustom/js/message.js");
 
 
 function exec_custom_test(input) {
-  if (_config_js_custom_test__WEBPACK_IMPORTED_MODULE_0__["tests"][input.custom].test(input) === false) {
-    _config_js_message__WEBPACK_IMPORTED_MODULE_1__["msgErreur"][input.type][input.custom + '_' + input.erreur] = _config_js_custom_test__WEBPACK_IMPORTED_MODULE_0__["tests"][input.custom].message;
+  if (formcustom_js_custom_test__WEBPACK_IMPORTED_MODULE_0__["tests"][input.custom].test(input) === false) {
+    formcustom_js_message__WEBPACK_IMPORTED_MODULE_1__["msgErreur"][input.type][input.custom + '_' + input.erreur] = formcustom_js_custom_test__WEBPACK_IMPORTED_MODULE_0__["tests"][input.custom].message;
     return input.custom;
   }
 }
@@ -17202,6 +17232,42 @@ function emptyForm($form, except) {
 
 /***/ }),
 
+/***/ "./src/js/tools/formTool/hydrateForm.js":
+/*!**********************************************!*\
+  !*** ./src/js/tools/formTool/hydrateForm.js ***!
+  \**********************************************/
+/*! exports provided: hydrateForm */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* WEBPACK VAR INJECTION */(function($) {/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "hydrateForm", function() { return hydrateForm; });
+function hydrateForm($form, data, action) {
+  $form.find(':input').each(function () {
+    let name = $(this).attr('name');
+    let type = $(this).attr('type');
+    if (data[name] === undefined) return;
+
+    if ($.inArray(action, 'init') === -1) {
+      $(this).trigger('init-input');
+    }
+
+    if (type === 'file' && $(this).data('cropper') !== undefined) {
+      $('#appercu-' + name).attr('src', '/storage/cover/' + data[name]);
+      return;
+    }
+
+    $(this).val(data[name]);
+
+    if ($(this).is('textarea') && $('#compteur-' + name).length !== 0) {
+      $(this).trigger('update-compteur');
+    }
+  });
+}
+/* WEBPACK VAR INJECTION */}.call(this, __webpack_require__(/*! jquery */ "./node_modules/jquery/dist/jquery.js")))
+
+/***/ }),
+
 /***/ "./src/js/tools/formTool/resetFile.js":
 /*!********************************************!*\
   !*** ./src/js/tools/formTool/resetFile.js ***!
@@ -17229,8 +17295,8 @@ function resetFile($input) {
 "use strict";
 __webpack_require__.r(__webpack_exports__);
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "getMessage", function() { return getMessage; });
-/* harmony import */ var _config_js_message__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ../../config/js/message */ "./src/config/js/message.js");
-/* harmony import */ var _config_js_fileType__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ../../config/js/fileType */ "./src/config/js/fileType.js");
+/* harmony import */ var formcustom_js_message__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! formcustom/js/message */ "./config/formcustom/js/message.js");
+/* harmony import */ var formcustom_js_fileType__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! formcustom/js/fileType */ "./config/formcustom/js/fileType.js");
 
 
 function getMessage(input, prefix) {
@@ -17239,11 +17305,11 @@ function getMessage(input, prefix) {
   }
 
   prefix = prefix === "" ? "" : prefix + "_";
-  input.erreur = input.erreur === undefined || _config_js_message__WEBPACK_IMPORTED_MODULE_0__["msgErreur"][input.type][prefix + input.erreur] === undefined ? "defaut" : input.erreur;
-  let message = _config_js_message__WEBPACK_IMPORTED_MODULE_0__["msgErreur"][input.type][prefix + input.erreur];
+  input.erreur = input.erreur === undefined || formcustom_js_message__WEBPACK_IMPORTED_MODULE_0__["msgErreur"][input.type][prefix + input.erreur] === undefined ? "defaut" : input.erreur;
+  let message = formcustom_js_message__WEBPACK_IMPORTED_MODULE_0__["msgErreur"][input.type][prefix + input.erreur];
 
-  if (input.extention !== undefined && _config_js_fileType__WEBPACK_IMPORTED_MODULE_1__["fileType"][input.extention] !== undefined && prefix === 'type_') {
-    message = message + _config_js_fileType__WEBPACK_IMPORTED_MODULE_1__["fileType"][input.extention].join(', ');
+  if (input.extention !== undefined && formcustom_js_fileType__WEBPACK_IMPORTED_MODULE_1__["fileType"][input.extention] !== undefined && prefix === 'type_') {
+    message = message + formcustom_js_fileType__WEBPACK_IMPORTED_MODULE_1__["fileType"][input.extention].join(', ');
   }
 
   return message;
@@ -17454,7 +17520,7 @@ function verifByType(input, event) {
 "use strict";
 __webpack_require__.r(__webpack_exports__);
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "verifInput", function() { return verifInput; });
-/* harmony import */ var _config_js_regex__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ../../config/js/regex */ "./src/config/js/regex.js");
+/* harmony import */ var _config_formcustom_js_regex__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ../../config/formcustom/js/regex */ "./src/config/formcustom/js/regex.js");
 /* harmony import */ var _defineParamInput__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./defineParamInput */ "./src/js/tools/defineParamInput.js");
 /* harmony import */ var _init__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./init */ "./src/js/tools/init.js");
 /* harmony import */ var _input_datalist__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ../input/datalist */ "./src/js/input/datalist.js");
@@ -17473,7 +17539,7 @@ let paternInput = ['iban', 'site', 'tel', 'colorpicker', 'mail'];
 function verifInput(champ, event) {
   let prefixe;
   let input = Object(_defineParamInput__WEBPACK_IMPORTED_MODULE_1__["defineParamInput"])(champ);
-  let regex = new RegExp(_config_js_regex__WEBPACK_IMPORTED_MODULE_0__["regexList"][input.type]);
+  let regex = new RegExp(_config_formcustom_js_regex__WEBPACK_IMPORTED_MODULE_0__["regexList"][input.type]);
 
   if (input.type === 'datalist') {
     Object(_input_datalist__WEBPACK_IMPORTED_MODULE_3__["verifDatalist"])(input);

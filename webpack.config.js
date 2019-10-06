@@ -10,6 +10,14 @@ let config = {
         path: path.resolve(__dirname, "./public/js"),
         filename: "./formCustom.js",
     },
+    resolve: {
+        modules: [
+            path.resolve(__dirname + '/config'),
+            path.resolve(__dirname + '/vendor'),
+            path.resolve(__dirname + '/node_modules'),
+            path.resolve(__dirname + '/resources'),
+        ]
+    },
     module : {
         rules: [{
             test: /\.js$/,
@@ -61,7 +69,7 @@ let config = {
         }),
         new ExtractTextPlugin({
             filename: "../css/formCustom.css"
-        }),
+        })
     ],
     devtool: 'source-map'
 };

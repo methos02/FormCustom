@@ -1,5 +1,5 @@
-import {msgErreur} from "../../config/formcustom/js/message";
-import {fileType} from "../../config/formcustom/js/fileType";
+import {msgErreur} from "formcustom/js/message";
+import {fileType} from "formcustom/js/fileType";
 
 export function getMessage(input, prefix) {
     if(prefix === false) {return "";}
