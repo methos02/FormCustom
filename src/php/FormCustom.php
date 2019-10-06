@@ -23,8 +23,8 @@ class FormCustom
     static protected $values;
 
     public static function open($name, $options = []) {
-        if (empty(self::$config)) { self::$config = include(__DIR__ . '/../config/formcustom/php/config.php'); }
-        if (empty(self::$const)) { self::$const = include(__DIR__ . '/../config/formcustom/php/constante.php'); }
+        if (empty(self::$config)) { self::$config = include(__DIR__ . '/../../config/formcustom/php/config.php'); }
+        if (empty(self::$const)) { self::$const = include(__DIR__ . '/../../config/formcustom/php/constante.php'); }
         if (!empty($options['errors'])) {self::$errors = FormatData::formatError($options['errors']);}
         self::$values = FormatData::formatData($options['data'] ?? [], $options['old'] ?? []);
 
