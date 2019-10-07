@@ -3,6 +3,7 @@
 import '../css/formCustom.scss';
 import '../img/empty_img.png';
 import '../img/empty_video.png';
+import '../img/click.png';
 import {insertErreur} from "./tools/insertErreur";
 import {getMessage} from "./tools/getMessage";
 import {verifInput} from "./tools/verifInput";
