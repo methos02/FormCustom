@@ -17228,7 +17228,6 @@ function emptyForm($form, except) {
 
     if ($.inArray(name, except) === -1) {
       $(this).val(function () {
-        console.log($input.is('select'), $input);
         return $input.is('select') ? -1 : '';
       });
     }
@@ -17260,6 +17259,7 @@ function hydrateForm($form, data, action) {
   $form.find(':input').each(function () {
     let name = $(this).attr('name');
     let type = $(this).attr('type');
+    $(this).removeAttr('disabled');
     if (data[name] === undefined) return;
 
     if ($.inArray(action, 'init') === -1) {
