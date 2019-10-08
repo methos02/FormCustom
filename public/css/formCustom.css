@@ -60,6 +60,12 @@
   font-family: sans-serif;
   font-size: 16px; }
 
+.input-compact.no-label {
+  padding: 6px 6px 6px 6px; }
+
+.input-compact.input_erreur {
+  padding: 18px 6px 6px 6px; }
+
 .label-compact {
   min-width: 200px;
   position: relative;

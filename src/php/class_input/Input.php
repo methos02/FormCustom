@@ -28,6 +28,7 @@ class Input
             'dataType' => $this->dataType,
             'error' => $this->getError($options['nom'], $options['errors']),
             'label' => $options['label'],
+            'no_label' => $options['label'] == ""? ' no-label' : "",
             'message' => isset($options['message'])? ' data-message="' . $options['message'] . '"': '',
             'nom' => $options['nom'],
             'custom' => isset($options['custom'])? 'data-custom="' . $options['custom'] . '"' : '',
