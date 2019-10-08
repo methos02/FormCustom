@@ -23,7 +23,7 @@ class Input
         $this->params = [
             'class_btn' => isset($options['class_btn'])? ' ' . $options['class_btn']: '',
             'class_label' => isset($options['class_label'])? ' ' . $options['class_label']: '',
-            'class_before' => isset($options['before'])? ' before': '',
+            'class_after' => isset($options['after'])? ' after': '',
             'id' => isset($options['id'])? ' id="' .$options['id'] . '"': '',
             'dataType' => $this->dataType,
             'error' => $this->getError($options['nom'], $options['errors']),
@@ -39,7 +39,7 @@ class Input
             'value' => $value,
             'valueFormat' => $this->formatValue($value),
             'view' => isset($options['view']) && $options['view'] == false ? ' style="display:none"' : '',
-            'before' => $options['before'] ?? '',
+            'after' => $options['after'] ?? '',
             'width' => isset($options['width']) && in_array($options['width'], self::WIDTH)? ' ' . $options['width']: '',
         ];
     }

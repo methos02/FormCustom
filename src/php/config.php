@@ -15,6 +15,7 @@ return [
     'multi_select' => 'multi_select',
     'nom' => 'input',
     'numb' => 'input',
+    'numb_increment' => 'numb_increment',
     'numb_rue' => 'input',
     'pdf' => 'file',
     'rue' => 'input',

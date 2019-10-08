@@ -11,6 +11,7 @@ use FormCustom\class_input\Input;
 use FormCustom\class_input\Mdp;
 use FormCustom\class_input\MdpConfirm;
 use FormCustom\class_input\MultiSelect;
+use FormCustom\class_input\NumbIncrement;
 use FormCustom\class_input\Password;
 use FormCustom\class_input\Select;
 use FormCustom\class_input\Text;
@@ -23,7 +24,7 @@ class FormCustom
     static protected $values;
 
     public static function open($name, $options = []) {
-        if (empty(self::$config)) { self::$config = include($_SERVER["DOCUMENT_ROOT"] . '/../config/formcustom/php/config.php'); }
+        if (empty(self::$config)) { self::$config = include('config.php'); }
         if (empty(self::$const)) { self::$const = include($_SERVER["DOCUMENT_ROOT"] . '/../config/formcustom/php/constante.php'); }
         if (!empty($options['errors'])) {self::$errors = FormatData::formatError($options['errors']);}
         self::$values = FormatData::formatData($options['data'] ?? [], $options['old'] ?? []);
@@ -139,6 +140,11 @@ class FormCustom
 
     static function numb($nom, $first_arg, $second_arg = []) {
         $input = new Input(__FUNCTION__, self::defineOptions($nom, $first_arg, $second_arg));
+        return $input->generateInput();
+    }
+
+    static function numb_increment($nom, $first_arg, $second_arg = []) {
+        $input = new NumbIncrement(__FUNCTION__, self::defineOptions($nom, $first_arg, $second_arg));
         return $input->generateInput();
     }
 

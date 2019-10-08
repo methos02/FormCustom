@@ -72,11 +72,11 @@
   margin-right: 12px;
   font-weight: normal !important; }
 
-.label-compact.before {
+.label-compact.after {
   display: flex; }
-  .label-compact.before .input-compact {
+  .label-compact.after .input-compact {
     border-radius: 4px 0 0 4px; }
-  .label-compact.before .input-before {
+  .label-compact.after .input-after {
     line-height: 40px;
     padding: 0 10px;
     border: 1px solid #ccc;
@@ -368,6 +368,32 @@
   border-left: 7px solid transparent;
   border-right: 7px solid transparent;
   border-top: 7px solid #928e8e; }
+
+.numb_increment {
+  display: flex;
+  min-width: 110px;
+  width: 110px; }
+  .numb_increment input {
+    border-radius: 0; }
+  .numb_increment .label-input {
+    left: 35px; }
+  .numb_increment button {
+    line-height: 40px;
+    padding: 0 10px;
+    border: 1px solid #477acc;
+    position: relative;
+    background: #477acc;
+    color: #ffffff; }
+  .numb_increment button:hover {
+    background: #519df9; }
+  .numb_increment .btn-before {
+    border-radius: 4px 0 0 4px;
+    right: -1px;
+    font-size: 20px; }
+  .numb_increment .btn-after {
+    border-radius: 0 4px 4px 0;
+    left: -1px;
+    font-size: 18px; }
 
 .text-compact {
   border-radius: 4px;
