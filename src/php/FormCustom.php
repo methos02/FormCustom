@@ -53,145 +53,147 @@ class FormCustom
         return '<input type="submit" value="' . $value . '" class="btn ' . $class . '" ' . $verif . ' >';
     }
 
-    static function defineOptions($nom, $label, $options) {
+    static function defineOptions($nom, $first_arg, $second_arg) {
         $new_options = [
             'nom' => $nom,
-            'label' => $label,
+            'label' => is_string($first_arg)? $first_arg : '',
             'values' => self::$values,
             'errors' => self::$errors,
             'config' => self::$config,
             'const' => self::$const
         ];
 
+        $options = is_array($first_arg)? $first_arg : $second_arg;
+
         return array_merge($options, $new_options);
     }
 
-    static function checkbox($nom, $label, $options = []) {
-        $input = new Checkbox(__FUNCTION__, self::defineOptions($nom, $label,$options));
+    static function checkbox($nom, $first_arg, $second_arg = []) {
+        $input = new Checkbox(__FUNCTION__, self::defineOptions($nom, $first_arg, $second_arg));
         return $input->generateInput();
     }
 
-    static function cp($nom, $label, $options = []) {
-        $input = new Input(__FUNCTION__, self::defineOptions($nom, $label,$options));
+    static function cp($nom, $first_arg, $second_arg = []) {
+        $input = new Input(__FUNCTION__, self::defineOptions($nom, $first_arg, $second_arg));
         return $input->generateInput();
     }
-    static function color_picker($nom, $label, $options = []) {
-        $input = new Input(__FUNCTION__, self::defineOptions($nom, $label,$options));
-        return $input->generateInput();
-    }
-
-    static function datalist($nom, $label, $liste, $options = []) {
-        $input = new Datalist(__FUNCTION__, $liste, self::defineOptions($nom, $label, $options));
+    static function color_picker($nom, $first_arg, $second_arg = []) {
+        $input = new Input(__FUNCTION__, self::defineOptions($nom, $first_arg, $second_arg));
         return $input->generateInput();
     }
 
-    static function date($nom, $label, $options = []) {
-        $input = new Date(__FUNCTION__, self::defineOptions($nom, $label, $options));
+    static function datalist($nom, $first_arg, $liste, $second_arg = []) {
+        $input = new Datalist(__FUNCTION__, $liste, self::defineOptions($nom, $first_arg, $second_arg));
         return $input->generateInput();
     }
 
-    static function heure($nom, $label, $options = []) {
-        $input = new Heure(__FUNCTION__, self::defineOptions($nom, $label,$options));
+    static function date($nom, $first_arg, $second_arg = []) {
+        $input = new Date(__FUNCTION__, self::defineOptions($nom, $first_arg, $second_arg));
         return $input->generateInput();
     }
 
-    static function img($nom, $label, $options = []) {
-        $input = new File(__FUNCTION__, self::defineOptions($nom, $label,$options));
+    static function heure($nom, $first_arg, $second_arg = []) {
+        $input = new Heure(__FUNCTION__, self::defineOptions($nom, $first_arg, $second_arg));
         return $input->generateInput();
     }
 
-    static function img_cropper($nom, $label, $options = []) {
-        $input = new Img_cropper(__FUNCTION__, self::defineOptions($nom, $label,$options));
+    static function img($nom, $first_arg, $second_arg = []) {
+        $input = new File(__FUNCTION__, self::defineOptions($nom, $first_arg, $second_arg));
         return $input->generateInput();
     }
 
-    static function licence($nom, $label, $options = []) {
-        $input = new Input(__FUNCTION__, self::defineOptions($nom, $label,$options));
+    static function img_cropper($nom, $first_arg, $second_arg = []) {
+        $input = new Img_cropper(__FUNCTION__, self::defineOptions($nom, $first_arg, $second_arg));
         return $input->generateInput();
     }
 
-    static function mail($nom, $label, $options = []) {
-        $input = new Input(__FUNCTION__, self::defineOptions($nom, $label,$options));
+    static function licence($nom, $first_arg, $second_arg = []) {
+        $input = new Input(__FUNCTION__, self::defineOptions($nom, $first_arg, $second_arg));
         return $input->generateInput();
     }
 
-    static function mdp($nom, $label, $options = []) {
-        $input = new Mdp(__FUNCTION__, self::defineOptions($nom, $label,$options));
+    static function mail($nom, $first_arg, $second_arg = []) {
+        $input = new Input(__FUNCTION__, self::defineOptions($nom, $first_arg, $second_arg));
         return $input->generateInput();
     }
 
-    static function mdp_2($nom, $label, $options = []) {
-        $input = new MdpConfirm(__FUNCTION__, self::defineOptions($nom, $label,$options));
+    static function mdp($nom, $first_arg, $second_arg = []) {
+        $input = new Mdp(__FUNCTION__, self::defineOptions($nom, $first_arg, $second_arg));
         return $input->generateInput();
     }
 
-    static function multi_select($nom, $label, $liste, $options = []) {
-        $input = new MultiSelect(__FUNCTION__, $liste, self::defineOptions($nom, $label, $options));
+    static function mdp_2($nom, $first_arg, $second_arg = []) {
+        $input = new MdpConfirm(__FUNCTION__, self::defineOptions($nom, $first_arg, $second_arg));
         return $input->generateInput();
     }
 
-    static function nom($nom, $label, $options = []) {
-        $input = new Input(__FUNCTION__, self::defineOptions($nom, $label,$options));
+    static function multi_select($nom, $first_arg, $liste, $second_arg = []) {
+        $input = new MultiSelect(__FUNCTION__, $liste, self::defineOptions($nom, $first_arg, $second_arg));
         return $input->generateInput();
     }
 
-    static function numb($nom, $label, $options = []) {
-        $input = new Input(__FUNCTION__, self::defineOptions($nom, $label,$options));
+    static function nom($nom, $first_arg, $second_arg = []) {
+        $input = new Input(__FUNCTION__, self::defineOptions($nom, $first_arg, $second_arg));
         return $input->generateInput();
     }
 
-    static function numb_rue($nom, $label, $options = []) {
-        $input = new Input(__FUNCTION__, self::defineOptions($nom, $label,$options));
+    static function numb($nom, $first_arg, $second_arg = []) {
+        $input = new Input(__FUNCTION__, self::defineOptions($nom, $first_arg, $second_arg));
         return $input->generateInput();
     }
 
-    static function password($nom, $label, $options = []) {
-        $input = new Password(__FUNCTION__, self::defineOptions($nom, $label,$options));
+    static function numb_rue($nom, $first_arg, $second_arg = []) {
+        $input = new Input(__FUNCTION__, self::defineOptions($nom, $first_arg, $second_arg));
         return $input->generateInput();
     }
 
-    static function pdf($nom, $label, $options = []) {
-        $input = new File(__FUNCTION__, self::defineOptions($nom, $label,$options));
+    static function password($nom, $first_arg, $second_arg = []) {
+        $input = new Password(__FUNCTION__, self::defineOptions($nom, $first_arg, $second_arg));
         return $input->generateInput();
     }
 
-    static function rue($nom, $label, $options = []) {
-        $input = new Input(__FUNCTION__, self::defineOptions($nom, $label,$options));
+    static function pdf($nom, $first_arg, $second_arg = []) {
+        $input = new File(__FUNCTION__, self::defineOptions($nom, $first_arg, $second_arg));
         return $input->generateInput();
     }
 
-    static function select($nom, $label, $liste, $options = []) {
-        $input = new Select(__FUNCTION__, $liste, self::defineOptions($nom, $label,$options));
+    static function rue($nom, $first_arg, $second_arg = []) {
+        $input = new Input(__FUNCTION__, self::defineOptions($nom, $first_arg, $second_arg));
         return $input->generateInput();
     }
 
-    static function site($nom, $label, $options = []) {
-        $input = new Input(__FUNCTION__, self::defineOptions($nom, $label,$options));
+    static function select($nom, $first_arg, $liste, $second_arg = []) {
+        $input = new Select(__FUNCTION__, $liste, self::defineOptions($nom, $first_arg, $second_arg));
         return $input->generateInput();
     }
 
-    static function tel($nom, $label, $options = []) {
-        $input = new Input(__FUNCTION__, self::defineOptions($nom, $label,$options));
+    static function site($nom, $first_arg, $second_arg = []) {
+        $input = new Input(__FUNCTION__, self::defineOptions($nom, $first_arg, $second_arg));
         return $input->generateInput();
     }
 
-    static function text($nom, $label, $options = []) {
-        $input = new Text(__FUNCTION__, self::defineOptions($nom, $label,$options));
+    static function tel($nom, $first_arg, $second_arg = []) {
+        $input = new Input(__FUNCTION__, self::defineOptions($nom, $first_arg, $second_arg));
         return $input->generateInput();
     }
 
-    static function titre($nom, $label, $options = []) {
-        $input = new Input(__FUNCTION__, self::defineOptions($nom, $label,$options));
+    static function text($nom, $first_arg, $second_arg = []) {
+        $input = new Text(__FUNCTION__, self::defineOptions($nom, $first_arg, $second_arg));
         return $input->generateInput();
     }
 
-    static function video($nom, $label, $options = []) {
-        $input = new File(__FUNCTION__, self::defineOptions($nom, $label,$options));
+    static function titre($nom, $first_arg, $second_arg = []) {
+        $input = new Input(__FUNCTION__, self::defineOptions($nom, $first_arg, $second_arg));
         return $input->generateInput();
     }
 
-    static function ville($nom, $label, $options = []) {
-        $input = new Input(__FUNCTION__, self::defineOptions($nom, $label,$options));
+    static function video($nom, $first_arg, $second_arg = []) {
+        $input = new File(__FUNCTION__, self::defineOptions($nom, $first_arg, $second_arg));
+        return $input->generateInput();
+    }
+
+    static function ville($nom, $first_arg, $second_arg = []) {
+        $input = new Input(__FUNCTION__, self::defineOptions($nom, $first_arg, $second_arg));
         return $input->generateInput();
     }
 }
