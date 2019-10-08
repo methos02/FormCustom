@@ -15631,6 +15631,17 @@ let regexList = {
 
 /***/ }),
 
+/***/ "./src/img/click.png":
+/*!***************************!*\
+  !*** ./src/img/click.png ***!
+  \***************************/
+/*! no static exports found */
+/***/ (function(module, exports) {
+
+module.exports = "../images/../images/click.png";
+
+/***/ }),
+
 /***/ "./src/img/empty_img.png":
 /*!*******************************!*\
   !*** ./src/img/empty_img.png ***!
@@ -16335,35 +16346,38 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _img_empty_img_png__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(_img_empty_img_png__WEBPACK_IMPORTED_MODULE_1__);
 /* harmony import */ var _img_empty_video_png__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ../img/empty_video.png */ "./src/img/empty_video.png");
 /* harmony import */ var _img_empty_video_png__WEBPACK_IMPORTED_MODULE_2___default = /*#__PURE__*/__webpack_require__.n(_img_empty_video_png__WEBPACK_IMPORTED_MODULE_2__);
-/* harmony import */ var _tools_insertErreur__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ./tools/insertErreur */ "./src/js/tools/insertErreur.js");
-/* harmony import */ var _tools_getMessage__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ./tools/getMessage */ "./src/js/tools/getMessage.js");
-/* harmony import */ var _tools_verifInput__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ./tools/verifInput */ "./src/js/tools/verifInput.js");
-/* harmony import */ var _event_keyDown__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! ./event/keyDown */ "./src/js/event/keyDown.js");
-/* harmony import */ var _event_keyDown__WEBPACK_IMPORTED_MODULE_6___default = /*#__PURE__*/__webpack_require__.n(_event_keyDown__WEBPACK_IMPORTED_MODULE_6__);
-/* harmony import */ var _event_keyUp__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(/*! ./event/keyUp */ "./src/js/event/keyUp.js");
-/* harmony import */ var _event_keyUp__WEBPACK_IMPORTED_MODULE_7___default = /*#__PURE__*/__webpack_require__.n(_event_keyUp__WEBPACK_IMPORTED_MODULE_7__);
-/* harmony import */ var _event_checkbox__WEBPACK_IMPORTED_MODULE_8__ = __webpack_require__(/*! ./event/checkbox */ "./src/js/event/checkbox.js");
-/* harmony import */ var _event_checkbox__WEBPACK_IMPORTED_MODULE_8___default = /*#__PURE__*/__webpack_require__.n(_event_checkbox__WEBPACK_IMPORTED_MODULE_8__);
-/* harmony import */ var _event_ck_editor__WEBPACK_IMPORTED_MODULE_9__ = __webpack_require__(/*! ./event/ck_editor */ "./src/js/event/ck_editor.js");
-/* harmony import */ var _event_ck_editor__WEBPACK_IMPORTED_MODULE_9___default = /*#__PURE__*/__webpack_require__.n(_event_ck_editor__WEBPACK_IMPORTED_MODULE_9__);
-/* harmony import */ var _event_datalist__WEBPACK_IMPORTED_MODULE_10__ = __webpack_require__(/*! ./event/datalist */ "./src/js/event/datalist.js");
-/* harmony import */ var _event_file__WEBPACK_IMPORTED_MODULE_11__ = __webpack_require__(/*! ./event/file */ "./src/js/event/file.js");
-/* harmony import */ var _event_file__WEBPACK_IMPORTED_MODULE_11___default = /*#__PURE__*/__webpack_require__.n(_event_file__WEBPACK_IMPORTED_MODULE_11__);
-/* harmony import */ var _event_date_heure__WEBPACK_IMPORTED_MODULE_12__ = __webpack_require__(/*! ./event/date_heure */ "./src/js/event/date_heure.js");
-/* harmony import */ var _event_date_heure__WEBPACK_IMPORTED_MODULE_12___default = /*#__PURE__*/__webpack_require__.n(_event_date_heure__WEBPACK_IMPORTED_MODULE_12__);
-/* harmony import */ var _event_colorpicker__WEBPACK_IMPORTED_MODULE_13__ = __webpack_require__(/*! ./event/colorpicker */ "./src/js/event/colorpicker.js");
-/* harmony import */ var _event_img_cropper__WEBPACK_IMPORTED_MODULE_14__ = __webpack_require__(/*! ./event/img_cropper */ "./src/js/event/img_cropper.js");
-/* harmony import */ var _event_multi_select__WEBPACK_IMPORTED_MODULE_15__ = __webpack_require__(/*! ./event/multi_select */ "./src/js/event/multi_select.js");
-/* harmony import */ var _event_multi_select__WEBPACK_IMPORTED_MODULE_15___default = /*#__PURE__*/__webpack_require__.n(_event_multi_select__WEBPACK_IMPORTED_MODULE_15__);
-/* harmony import */ var _event_confirm__WEBPACK_IMPORTED_MODULE_16__ = __webpack_require__(/*! ./event/confirm */ "./src/js/event/confirm.js");
-/* harmony import */ var _event_confirm__WEBPACK_IMPORTED_MODULE_16___default = /*#__PURE__*/__webpack_require__.n(_event_confirm__WEBPACK_IMPORTED_MODULE_16__);
-/* harmony import */ var _event_uForm__WEBPACK_IMPORTED_MODULE_17__ = __webpack_require__(/*! ./event/uForm */ "./src/js/event/uForm.js");
-/* harmony import */ var _event_uForm__WEBPACK_IMPORTED_MODULE_17___default = /*#__PURE__*/__webpack_require__.n(_event_uForm__WEBPACK_IMPORTED_MODULE_17__);
-/* harmony import */ var _event_compteur__WEBPACK_IMPORTED_MODULE_18__ = __webpack_require__(/*! ./event/compteur */ "./src/js/event/compteur.js");
-/* harmony import */ var _event_compteur__WEBPACK_IMPORTED_MODULE_18___default = /*#__PURE__*/__webpack_require__.n(_event_compteur__WEBPACK_IMPORTED_MODULE_18__);
-/* harmony import */ var _event_init__WEBPACK_IMPORTED_MODULE_19__ = __webpack_require__(/*! ./event/init */ "./src/js/event/init.js");
+/* harmony import */ var _img_click_png__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ../img/click.png */ "./src/img/click.png");
+/* harmony import */ var _img_click_png__WEBPACK_IMPORTED_MODULE_3___default = /*#__PURE__*/__webpack_require__.n(_img_click_png__WEBPACK_IMPORTED_MODULE_3__);
+/* harmony import */ var _tools_insertErreur__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ./tools/insertErreur */ "./src/js/tools/insertErreur.js");
+/* harmony import */ var _tools_getMessage__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ./tools/getMessage */ "./src/js/tools/getMessage.js");
+/* harmony import */ var _tools_verifInput__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! ./tools/verifInput */ "./src/js/tools/verifInput.js");
+/* harmony import */ var _event_keyDown__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(/*! ./event/keyDown */ "./src/js/event/keyDown.js");
+/* harmony import */ var _event_keyDown__WEBPACK_IMPORTED_MODULE_7___default = /*#__PURE__*/__webpack_require__.n(_event_keyDown__WEBPACK_IMPORTED_MODULE_7__);
+/* harmony import */ var _event_keyUp__WEBPACK_IMPORTED_MODULE_8__ = __webpack_require__(/*! ./event/keyUp */ "./src/js/event/keyUp.js");
+/* harmony import */ var _event_keyUp__WEBPACK_IMPORTED_MODULE_8___default = /*#__PURE__*/__webpack_require__.n(_event_keyUp__WEBPACK_IMPORTED_MODULE_8__);
+/* harmony import */ var _event_checkbox__WEBPACK_IMPORTED_MODULE_9__ = __webpack_require__(/*! ./event/checkbox */ "./src/js/event/checkbox.js");
+/* harmony import */ var _event_checkbox__WEBPACK_IMPORTED_MODULE_9___default = /*#__PURE__*/__webpack_require__.n(_event_checkbox__WEBPACK_IMPORTED_MODULE_9__);
+/* harmony import */ var _event_ck_editor__WEBPACK_IMPORTED_MODULE_10__ = __webpack_require__(/*! ./event/ck_editor */ "./src/js/event/ck_editor.js");
+/* harmony import */ var _event_ck_editor__WEBPACK_IMPORTED_MODULE_10___default = /*#__PURE__*/__webpack_require__.n(_event_ck_editor__WEBPACK_IMPORTED_MODULE_10__);
+/* harmony import */ var _event_datalist__WEBPACK_IMPORTED_MODULE_11__ = __webpack_require__(/*! ./event/datalist */ "./src/js/event/datalist.js");
+/* harmony import */ var _event_file__WEBPACK_IMPORTED_MODULE_12__ = __webpack_require__(/*! ./event/file */ "./src/js/event/file.js");
+/* harmony import */ var _event_file__WEBPACK_IMPORTED_MODULE_12___default = /*#__PURE__*/__webpack_require__.n(_event_file__WEBPACK_IMPORTED_MODULE_12__);
+/* harmony import */ var _event_date_heure__WEBPACK_IMPORTED_MODULE_13__ = __webpack_require__(/*! ./event/date_heure */ "./src/js/event/date_heure.js");
+/* harmony import */ var _event_date_heure__WEBPACK_IMPORTED_MODULE_13___default = /*#__PURE__*/__webpack_require__.n(_event_date_heure__WEBPACK_IMPORTED_MODULE_13__);
+/* harmony import */ var _event_colorpicker__WEBPACK_IMPORTED_MODULE_14__ = __webpack_require__(/*! ./event/colorpicker */ "./src/js/event/colorpicker.js");
+/* harmony import */ var _event_img_cropper__WEBPACK_IMPORTED_MODULE_15__ = __webpack_require__(/*! ./event/img_cropper */ "./src/js/event/img_cropper.js");
+/* harmony import */ var _event_multi_select__WEBPACK_IMPORTED_MODULE_16__ = __webpack_require__(/*! ./event/multi_select */ "./src/js/event/multi_select.js");
+/* harmony import */ var _event_multi_select__WEBPACK_IMPORTED_MODULE_16___default = /*#__PURE__*/__webpack_require__.n(_event_multi_select__WEBPACK_IMPORTED_MODULE_16__);
+/* harmony import */ var _event_confirm__WEBPACK_IMPORTED_MODULE_17__ = __webpack_require__(/*! ./event/confirm */ "./src/js/event/confirm.js");
+/* harmony import */ var _event_confirm__WEBPACK_IMPORTED_MODULE_17___default = /*#__PURE__*/__webpack_require__.n(_event_confirm__WEBPACK_IMPORTED_MODULE_17__);
+/* harmony import */ var _event_uForm__WEBPACK_IMPORTED_MODULE_18__ = __webpack_require__(/*! ./event/uForm */ "./src/js/event/uForm.js");
+/* harmony import */ var _event_uForm__WEBPACK_IMPORTED_MODULE_18___default = /*#__PURE__*/__webpack_require__.n(_event_uForm__WEBPACK_IMPORTED_MODULE_18__);
+/* harmony import */ var _event_compteur__WEBPACK_IMPORTED_MODULE_19__ = __webpack_require__(/*! ./event/compteur */ "./src/js/event/compteur.js");
+/* harmony import */ var _event_compteur__WEBPACK_IMPORTED_MODULE_19___default = /*#__PURE__*/__webpack_require__.n(_event_compteur__WEBPACK_IMPORTED_MODULE_19__);
+/* harmony import */ var _event_init__WEBPACK_IMPORTED_MODULE_20__ = __webpack_require__(/*! ./event/init */ "./src/js/event/init.js");
 /* Version 4.0 */
 //import des modules
+
 
 
 
@@ -16377,10 +16391,10 @@ __webpack_require__.r(__webpack_exports__);
 /* ------------- */
 
 $(document).on('input focusout', 'input[type=text][data-type], textarea[data-type], input[type=password][data-type]', function (e) {
-  Object(_tools_verifInput__WEBPACK_IMPORTED_MODULE_5__["verifInput"])(this, e.type);
+  Object(_tools_verifInput__WEBPACK_IMPORTED_MODULE_6__["verifInput"])(this, e.type);
 });
 $(document).on('change', '[data-type=select], [data-type=file], [data-type=multiselect]', function (e) {
-  Object(_tools_verifInput__WEBPACK_IMPORTED_MODULE_5__["verifInput"])(this, e.type);
+  Object(_tools_verifInput__WEBPACK_IMPORTED_MODULE_6__["verifInput"])(this, e.type);
 });
 /* ------------ */
 
@@ -16406,7 +16420,7 @@ $(document).on('click', 'button[data-verif], input[type=submit][data-verif], a[d
       }).each(function () {
         let message = $(this).data('message');
         let type = $(this).data('type');
-        Object(_tools_insertErreur__WEBPACK_IMPORTED_MODULE_3__["insertErreur"])(this, Object(_tools_getMessage__WEBPACK_IMPORTED_MODULE_4__["getMessage"])(type, message, 'empty_'));
+        Object(_tools_insertErreur__WEBPACK_IMPORTED_MODULE_4__["insertErreur"])(this, Object(_tools_getMessage__WEBPACK_IMPORTED_MODULE_5__["getMessage"])(type, message, 'empty_'));
       });
     }
   });
@@ -16418,7 +16432,7 @@ $(document).on('click', 'button[data-verif], input[type=submit][data-verif], a[d
   form.find(':input[data-type]:not([type=hidden], [type=submit])').filter(function () {
     return noStatut(this) || statutMultiInput(this);
   }).each(function () {
-    Object(_tools_verifInput__WEBPACK_IMPORTED_MODULE_5__["verifInput"])(this, 'submit');
+    Object(_tools_verifInput__WEBPACK_IMPORTED_MODULE_6__["verifInput"])(this, 'submit');
   });
 
   if (form.find(':input[data-statut=erreur]').length === 0) {

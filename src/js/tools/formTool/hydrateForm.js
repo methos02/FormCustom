@@ -3,6 +3,8 @@ export function hydrateForm($form, data, action) {
         let name = $(this).attr('name');
         let type = $(this).attr('type');
 
+        $(this).removeAttr('disabled');
+
         if(data[name] === undefined) return;
 
         if($.inArray(action, 'init') === -1 ) {

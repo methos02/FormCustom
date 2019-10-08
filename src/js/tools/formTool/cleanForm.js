@@ -29,7 +29,6 @@ function emptyForm($form, except) {
 
         if($.inArray(name, except) === -1) {
             $(this).val(function() {
-                console.log($input.is('select'), $input);
                 return $input.is('select')? -1 : '';
             });
         }
