@@ -16308,6 +16308,25 @@ function defineInput($target) {
 
 /***/ }),
 
+/***/ "./src/js/event/numb_increment.js":
+/*!****************************************!*\
+  !*** ./src/js/event/numb_increment.js ***!
+  \****************************************/
+/*! no static exports found */
+/***/ (function(module, exports, __webpack_require__) {
+
+/* WEBPACK VAR INJECTION */(function($) {$(document).on('click', '[data-input=numb_increment] [data-action]:not(disabled)', function (e) {
+  e.preventDefault();
+  let $input = $(this).siblings('input');
+  let val = $input.val() === "" ? 0 : parseInt($input.val());
+  let increment = $(this).data('action') === 'increase' ? 1 : -1;
+  if ($input.data('statut') === "erreur" || val === 0 && increment === -1) return;
+  $input.val(val + increment);
+});
+/* WEBPACK VAR INJECTION */}.call(this, __webpack_require__(/*! jquery */ "./node_modules/jquery/dist/jquery.js")))
+
+/***/ }),
+
 /***/ "./src/js/event/uForm.js":
 /*!*******************************!*\
   !*** ./src/js/event/uForm.js ***!
@@ -16368,13 +16387,15 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _event_img_cropper__WEBPACK_IMPORTED_MODULE_15__ = __webpack_require__(/*! ./event/img_cropper */ "./src/js/event/img_cropper.js");
 /* harmony import */ var _event_multi_select__WEBPACK_IMPORTED_MODULE_16__ = __webpack_require__(/*! ./event/multi_select */ "./src/js/event/multi_select.js");
 /* harmony import */ var _event_multi_select__WEBPACK_IMPORTED_MODULE_16___default = /*#__PURE__*/__webpack_require__.n(_event_multi_select__WEBPACK_IMPORTED_MODULE_16__);
-/* harmony import */ var _event_confirm__WEBPACK_IMPORTED_MODULE_17__ = __webpack_require__(/*! ./event/confirm */ "./src/js/event/confirm.js");
-/* harmony import */ var _event_confirm__WEBPACK_IMPORTED_MODULE_17___default = /*#__PURE__*/__webpack_require__.n(_event_confirm__WEBPACK_IMPORTED_MODULE_17__);
-/* harmony import */ var _event_uForm__WEBPACK_IMPORTED_MODULE_18__ = __webpack_require__(/*! ./event/uForm */ "./src/js/event/uForm.js");
-/* harmony import */ var _event_uForm__WEBPACK_IMPORTED_MODULE_18___default = /*#__PURE__*/__webpack_require__.n(_event_uForm__WEBPACK_IMPORTED_MODULE_18__);
-/* harmony import */ var _event_compteur__WEBPACK_IMPORTED_MODULE_19__ = __webpack_require__(/*! ./event/compteur */ "./src/js/event/compteur.js");
-/* harmony import */ var _event_compteur__WEBPACK_IMPORTED_MODULE_19___default = /*#__PURE__*/__webpack_require__.n(_event_compteur__WEBPACK_IMPORTED_MODULE_19__);
-/* harmony import */ var _event_init__WEBPACK_IMPORTED_MODULE_20__ = __webpack_require__(/*! ./event/init */ "./src/js/event/init.js");
+/* harmony import */ var _event_numb_increment__WEBPACK_IMPORTED_MODULE_17__ = __webpack_require__(/*! ./event/numb_increment */ "./src/js/event/numb_increment.js");
+/* harmony import */ var _event_numb_increment__WEBPACK_IMPORTED_MODULE_17___default = /*#__PURE__*/__webpack_require__.n(_event_numb_increment__WEBPACK_IMPORTED_MODULE_17__);
+/* harmony import */ var _event_confirm__WEBPACK_IMPORTED_MODULE_18__ = __webpack_require__(/*! ./event/confirm */ "./src/js/event/confirm.js");
+/* harmony import */ var _event_confirm__WEBPACK_IMPORTED_MODULE_18___default = /*#__PURE__*/__webpack_require__.n(_event_confirm__WEBPACK_IMPORTED_MODULE_18__);
+/* harmony import */ var _event_uForm__WEBPACK_IMPORTED_MODULE_19__ = __webpack_require__(/*! ./event/uForm */ "./src/js/event/uForm.js");
+/* harmony import */ var _event_uForm__WEBPACK_IMPORTED_MODULE_19___default = /*#__PURE__*/__webpack_require__.n(_event_uForm__WEBPACK_IMPORTED_MODULE_19__);
+/* harmony import */ var _event_compteur__WEBPACK_IMPORTED_MODULE_20__ = __webpack_require__(/*! ./event/compteur */ "./src/js/event/compteur.js");
+/* harmony import */ var _event_compteur__WEBPACK_IMPORTED_MODULE_20___default = /*#__PURE__*/__webpack_require__.n(_event_compteur__WEBPACK_IMPORTED_MODULE_20__);
+/* harmony import */ var _event_init__WEBPACK_IMPORTED_MODULE_21__ = __webpack_require__(/*! ./event/init */ "./src/js/event/init.js");
 /* Version 4.0 */
 //import des modules
 
@@ -16455,6 +16476,7 @@ function checkStatut(input) {
   return ['valide', 'erreur'].indexOf($(input).data('statut')) === -1;
 }
 /* import des events */
+
 
 
 

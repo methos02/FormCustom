@@ -87,6 +87,7 @@ import './event/date_heure';
 import './event/colorpicker';
 import './event/img_cropper';
 import './event/multi_select';
+import './event/numb_increment';
 import './event/confirm';
 import './event/uForm';
 import './event/compteur';
