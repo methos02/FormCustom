@@ -114,9 +114,9 @@
   text-decoration: none;
   -webkit-border-radius: 3px;
   border-radius: 5px;
-  -webkit-transition: all 0.3s ease-in-out;
-  -moz-transition: all 0.3s ease-in-out;
-  transition: all 0.3s ease-in-out;
+  -webkit-transition: background-color 0.3s ease-in-out;
+  -moz-transition: background-color 0.3s ease-in-out;
+  transition: background-color 0.3s ease-in-out;
   border: 1px solid #C6CBCB;
   color: #6c6c6c;
   background-color: #fff;
@@ -127,14 +127,93 @@
 .btn:hover {
   background-color: #e0e0e0; }
 
-.btn_valide {
-  border: 1px solid #8cd453;
-  color: #63bf51;
-  font-weight: 700; }
+.btn[disabled], .btn[disabled]:hover {
+  cursor: not-allowed;
+  background-color: #fff;
+  border-color: #ccc;
+  opacity: .65; }
 
-.btn_erreur {
-  background-color: #ff8f77;
-  border: 1px solid red; }
+.btn-neg-native {
+  background-color: white;
+  border: 1px solid #02b875;
+  color: #02b875 !important; }
+
+.btn-native, .btn-uform-select {
+  background-color: #02b875;
+  border: 1px solid #02b875;
+  color: white !important; }
+
+.btn-neg-native:hover {
+  background-color: #02b875 !important;
+  color: white !important; }
+
+.btn-erreur {
+  background-color: #f9b5b5;
+  border: 1px solid #ce2522;
+  color: #ce2522 !important; }
+
+.btn-valide {
+  background-color: #9bf790;
+  border: 1px solid #22a238;
+  color: #22a238 !important; }
+
+.btn-neg-valide {
+  border: 1px solid #22a238;
+  color: #22a238 !important;
+  background-color: white !important; }
+
+.btn-neg-erreur {
+  border: 1px solid #ce2522;
+  color: #ce2522 !important;
+  background-color: white !important; }
+
+.btn-neg-erreur:hover {
+  background-color: #f9b5b5 !important;
+  color: #ce2522 !important; }
+
+.btn-neg-valide:hover {
+  background-color: #9bf790 !important;
+  color: #22a238 !important; }
+
+.btn-danger {
+  color: #fff;
+  background-color: #d9534f;
+  border-color: #d43f3a; }
+
+.btn-danger:hover {
+  color: #fff;
+  background-color: #c9302c;
+  border-color: #ac2925; }
+
+.btn-info {
+  color: #fff;
+  background-color: #5bc0de;
+  border-color: #46b8da; }
+
+.btn-info:hover {
+  color: #fff;
+  background-color: #31b0d5;
+  border-color: #269abc; }
+
+.btn-success {
+  color: #fff;
+  background-color: #5cb85c;
+  border-color: #4cae4c; }
+
+.btn-success:hover {
+  color: #fff;
+  background-color: #449d44;
+  border-color: #398439; }
+
+.btn-primary {
+  color: #fff;
+  background-color: #337ab7;
+  border-color: #2e6da4; }
+
+.btn-primary:hover {
+  color: #fff;
+  background-color: #286090;
+  border-color: #204d74; }
 
 .input-color {
   min-width: auto !important; }
