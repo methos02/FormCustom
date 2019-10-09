@@ -65,7 +65,7 @@ class Input
     }
 
     public function getValue($key, $values) {
-        return (is_array($values) && key_exists($key, $values))? $values[$key] : "";
+        return (is_array($values) && key_exists($key, $values))? strval($values[$key]) : "";
     }
 
     public function formatValue($value) {
