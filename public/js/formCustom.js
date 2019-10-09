@@ -237,6 +237,9 @@ let msgErreur = {
     'defaut': "Le nombre est invalide.",
     'prix': "Le prix est invalide."
   },
+  numb_increment: {
+    'defaut': "Invalide."
+  },
   numb_rue: {
     "defaut": "Le numéro de la rue est invalide."
   },
@@ -15608,7 +15611,8 @@ let regexList = {
   mail: /^[\w.-]+@[\w.-]+\.[a-zA-Z]{2,6}$/,
   mdp: /^([0-9A-Za-z$@%*+\\-_!?,.;:=]+){0,25}$/,
   nom: /^[a-zA-ZÀ-ÿ\s'-]{0,80}$/,
-  numb: /^[0-9]+([,.][0-9]+)?$/,
+  numb: /^[+-]?([0-9]*[.])?[0-9]+$/,
+  numb_increment: /^\d*[1-9]\d*$/,
   numb_rue: /^[0-9]{1,5}[0-9A-Za-z\\s/-]{0,5}$/,
   rue: /^[a-zA-ZÀ-ÿ0-9\s'\-."]{0,100}$/,
   site: /^(https?:\/\/)?([\da-z.-]+).([a-z]{0,6})+$/,

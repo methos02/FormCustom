@@ -100,6 +100,11 @@ export let msgErreur = {
         'prix': "Le prix est invalide.",
     },
 
+    numb_increment : {
+        'defaut': "Invalide.",
+        'empty_defaut': "Invalide.",
+    },
+
     numb_rue : {
         "defaut" : "Le numéro de la rue est invalide.",
     },

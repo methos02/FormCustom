@@ -377,6 +377,8 @@
     border-radius: 0; }
   .numb_increment .label-input {
     left: 35px; }
+  .numb_increment .input_message {
+    left: 33px; }
   .numb_increment button {
     line-height: 40px;
     padding: 0 10px;
