@@ -4,6 +4,7 @@ import {external_init} from "./tools/init";
 import {insertErreur} from "./tools/insertErreur";
 import {hydrateForm} from "./tools/formTool/hydrateForm";
 import {defineParamInput} from "./tools/defineParamInput";
+import {getObjData} from "./tools/formTool/getData";
 
 export let FormCustom = {
     cleanForm: cleanForm,
@@ -11,5 +12,6 @@ export let FormCustom = {
     external_init : external_init,
     insertErreur : insertErreur,
     hydrateForm : hydrateForm,
-    defineParamInput : defineParamInput
+    defineParamInput : defineParamInput,
+    getObjData : getObjData,
 };

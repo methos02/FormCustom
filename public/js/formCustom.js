@@ -16517,6 +16517,8 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _tools_insertErreur__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ./tools/insertErreur */ "./src/js/tools/insertErreur.js");
 /* harmony import */ var _tools_formTool_hydrateForm__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ./tools/formTool/hydrateForm */ "./src/js/tools/formTool/hydrateForm.js");
 /* harmony import */ var _tools_defineParamInput__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ./tools/defineParamInput */ "./src/js/tools/defineParamInput.js");
+/* harmony import */ var _tools_formTool_getData__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! ./tools/formTool/getData */ "./src/js/tools/formTool/getData.js");
+
 
 
 
@@ -16529,7 +16531,8 @@ let FormCustom = {
   external_init: _tools_init__WEBPACK_IMPORTED_MODULE_2__["external_init"],
   insertErreur: _tools_insertErreur__WEBPACK_IMPORTED_MODULE_3__["insertErreur"],
   hydrateForm: _tools_formTool_hydrateForm__WEBPACK_IMPORTED_MODULE_4__["hydrateForm"],
-  defineParamInput: _tools_defineParamInput__WEBPACK_IMPORTED_MODULE_5__["defineParamInput"]
+  defineParamInput: _tools_defineParamInput__WEBPACK_IMPORTED_MODULE_5__["defineParamInput"],
+  getObjData: _tools_formTool_getData__WEBPACK_IMPORTED_MODULE_6__["getObjData"]
 };
 
 /***/ }),
@@ -17266,6 +17269,28 @@ function emptyForm($form, except) {
       $('#appercu-' + name).attr('src', '/storage/cover/cover-vide.jpg');
     }
   });
+}
+/* WEBPACK VAR INJECTION */}.call(this, __webpack_require__(/*! jquery */ "./node_modules/jquery/dist/jquery.js")))
+
+/***/ }),
+
+/***/ "./src/js/tools/formTool/getData.js":
+/*!******************************************!*\
+  !*** ./src/js/tools/formTool/getData.js ***!
+  \******************************************/
+/*! exports provided: getObjData */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* WEBPACK VAR INJECTION */(function($) {/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "getObjData", function() { return getObjData; });
+function getObjData($form) {
+  let array = $form.serializeArray();
+  let obj = {};
+  $.map(array, function (n, i) {
+    obj[n['name']] = n['value'];
+  });
+  return obj;
 }
 /* WEBPACK VAR INJECTION */}.call(this, __webpack_require__(/*! jquery */ "./node_modules/jquery/dist/jquery.js")))
 
