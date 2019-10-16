@@ -98,6 +98,11 @@ class FormCustom
         return $input->generateInput();
     }
 
+    static function hidden($nom, $first_arg, $second_arg = []) {
+        $input = new Input(__FUNCTION__, self::defineOptions($nom, $first_arg, $second_arg));
+        return $input->generateInput();
+    }
+
     static function img($nom, $first_arg, $second_arg = []) {
         $input = new File(__FUNCTION__, self::defineOptions($nom, $first_arg, $second_arg));
         return $input->generateInput();

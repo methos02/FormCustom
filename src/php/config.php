@@ -6,6 +6,7 @@ return [
     'datalist' => 'datalist',
     'date' => 'date',
     'heure' => 'heure',
+    'hidden' => 'hidden',
     'img' => 'file',
     'img_cropper' => 'img_cropper',
     'license' => 'input',

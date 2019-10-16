@@ -15816,16 +15816,12 @@ function changeBtnColor($input, color) {
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
-/* WEBPACK VAR INJECTION */(function($) {$(document).on('click', 'input[data-confirm=true]', function (e) {
+/* WEBPACK VAR INJECTION */(function($) {$(document).on('click', 'button[data-confirm]', function (e) {
   e.preventDefault();
-  $(this).hide();
-  $(this).siblings('[data-confirm]').show();
-});
-$(document).on('click', 'input[data-confirm=false]', function (e) {
-  e.preventDefault();
-  let span = $(this).closest('span[data-confirm]');
-  span.hide();
-  span.siblings('[data-confirm]').show();
+  let confirm = $(this).data('confirm');
+  let div_parent = $(this).closest('div[data-confirm=' + confirm + ']');
+  div_parent.hide();
+  div_parent.siblings('div[data-confirm=' + confirm + ']').show();
 });
 /* WEBPACK VAR INJECTION */}.call(this, __webpack_require__(/*! jquery */ "./node_modules/jquery/dist/jquery.js")))
 

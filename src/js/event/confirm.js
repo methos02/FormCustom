@@ -1,12 +1,8 @@
-$(document).on('click', 'input[data-confirm=true]', function(e){
+$(document).on('click', 'button[data-confirm]', function(e){
     e.preventDefault();
-    $(this).hide();
-    $(this).siblings('[data-confirm]').show();
-});
+    let confirm = $(this).data('confirm');
+    let div_parent = $(this).closest('div[data-confirm=' + confirm + ']');
 
-$(document).on('click', 'input[data-confirm=false]', function(e){
-    e.preventDefault();
-    let span = $(this).closest('span[data-confirm]');
-    span.hide();
-    span.siblings('[data-confirm]').show();
+    div_parent.hide();
+    div_parent.siblings('div[data-confirm=' + confirm + ']').show();
 });
