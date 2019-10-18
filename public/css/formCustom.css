@@ -108,6 +108,7 @@
   border-radius: 0 4px 4px 0; }
 
 .btn {
+  min-width: 110px;
   padding: 10px;
   margin: 5px;
   font-size: 18px;

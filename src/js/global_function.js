@@ -5,6 +5,7 @@ import {insertErreur} from "./tools/insertErreur";
 import {hydrateForm} from "./tools/formTool/hydrateForm";
 import {defineParamInput} from "./tools/defineParamInput";
 import {getObjData} from "./tools/formTool/getData";
+import {insertLaravelErreur} from "./tools/formTool/insertLaravelErreur";
 
 export let FormCustom = {
     cleanForm: cleanForm,
@@ -14,4 +15,5 @@ export let FormCustom = {
     hydrateForm : hydrateForm,
     defineParamInput : defineParamInput,
     getObjData : getObjData,
+    insertLaravelErreur : insertLaravelErreur,
 };
