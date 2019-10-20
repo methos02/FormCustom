@@ -15618,7 +15618,7 @@ let regexList = {
   mail: /^[\w.-]+@[\w.-]+\.[a-zA-Z]{2,6}$/,
   mdp: /^([0-9A-Za-z$@%*+\\-_!?,.;:=]+){0,25}$/,
   nom: /^[a-zA-ZÀ-ÿ\s'-]{0,80}$/,
-  numb: /^[+-]?([0-9]*[.])?[0-9]+$/,
+  numb: /^[+-]?([0-9]*[.,])?[0-9]+$/,
   numb_increment: /^\d*[1-9]\d*$/,
   numb_rue: /^[0-9]{1,5}[0-9A-Za-z\\s/-]{0,5}$/,
   rue: /^[a-zA-ZÀ-ÿ0-9\s'\-."]{0,100}$/,
@@ -15823,12 +15823,12 @@ function changeBtnColor($input, color) {
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
-/* WEBPACK VAR INJECTION */(function($) {$(document).on('click', 'button[data-confirm]', function (e) {
+/* WEBPACK VAR INJECTION */(function($) {$(document).on('click', '[data-confirm]', function (e) {
   e.preventDefault();
   let confirm = $(this).data('confirm');
-  let div_parent = $(this).closest('div[data-confirm=' + confirm + ']');
+  let div_parent = $(this).closest('[data-div_confirm]');
   div_parent.hide();
-  div_parent.siblings('div[data-confirm=' + confirm + ']').show();
+  div_parent.siblings('[data-div_confirm]').show();
 });
 /* WEBPACK VAR INJECTION */}.call(this, __webpack_require__(/*! jquery */ "./node_modules/jquery/dist/jquery.js")))
 
