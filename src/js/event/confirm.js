@@ -1,4 +1,4 @@
-$(document).on('click', 'button[data-confirm]', function(e){
+$(document).on('click', '[data-confirm]', function(e){
     e.preventDefault();
     let confirm = $(this).data('confirm');
     let div_parent = $(this).closest('div[data-confirm=' + confirm + ']');
