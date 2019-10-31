@@ -11,7 +11,7 @@
                     <source src="<?= $params['source'] ?>" type="video/mp4">
                 </video>
             <?php endif; ?>
-            <?php if(is_int($params['source']) ) : ?>
+            <?php if(is_numeric($params['source']) ) : ?>
                 <iframe src="https://player.vimeo.com/video/<?= $params['source'] ?>" width="auto" height="auto" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe>
             <?php endif; ?>
             <?php if($params['preview'] == '') : ?>
