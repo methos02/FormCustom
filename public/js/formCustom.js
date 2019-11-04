@@ -15493,9 +15493,8 @@ __webpack_require__.r(__webpack_exports__);
 
 
 
-$(document).on('click', '#insert_erreur', function (e) {
+$(document).on('submit', 'form[name=video_create]', function (e) {
   e.preventDefault();
-  _src_js_global_function__WEBPACK_IMPORTED_MODULE_2__["FormCustom"].insertLaravelErreur(JSON.parse('{"message":"The given data was invalid.","errors":{"baby_name":["The baby name must be a number."]}}'));
 });
 /* WEBPACK VAR INJECTION */}.call(this, __webpack_require__(/*! jquery */ "./node_modules/jquery/dist/jquery.js")))
 
@@ -15518,11 +15517,6 @@ $(document).on('custom_valide custom_erreur', 'input[name*=video_categories_id]'
   let $preview = $('input[name=preview]');
   toggle_input($prix, hide);
   toggle_input($preview, hide);
-
-  if (hide === true) {
-    $prix.val('');
-    _src_js_global_function__WEBPACK_IMPORTED_MODULE_0__["FormCustom"].resetFile($preview);
-  }
 });
 
 function toggle_input($input, hide) {
@@ -15672,6 +15666,25 @@ module.exports = "../images/../images/empty_img.png";
 /***/ (function(module, exports) {
 
 module.exports = "../images/../images/empty_video.png";
+
+/***/ }),
+
+/***/ "./src/js/event/button.js":
+/*!********************************!*\
+  !*** ./src/js/event/button.js ***!
+  \********************************/
+/*! no static exports found */
+/***/ (function(module, exports, __webpack_require__) {
+
+/* WEBPACK VAR INJECTION */(function($) {$(document).on('show-loader', 'button', function () {
+  $(this).find('img[alt=loader]').show();
+  $(this).find('[data-value]').hide();
+});
+$(document).on('close-loader', 'button', function () {
+  $(this).find('img[alt=loader]').hide();
+  $(this).find('[data-value]').show();
+});
+/* WEBPACK VAR INJECTION */}.call(this, __webpack_require__(/*! jquery */ "./node_modules/jquery/dist/jquery.js")))
 
 /***/ }),
 
@@ -16319,16 +16332,21 @@ function defineInput($target) {
 /*!****************************************!*\
   !*** ./src/js/event/numb_increment.js ***!
   \****************************************/
-/*! no static exports found */
-/***/ (function(module, exports, __webpack_require__) {
+/*! no exports provided */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
 
-/* WEBPACK VAR INJECTION */(function($) {$(document).on('click', '[data-input=numb_increment] [data-action]:not(disabled)', function (e) {
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* WEBPACK VAR INJECTION */(function($) {/* harmony import */ var _tools_verifInput__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ../tools/verifInput */ "./src/js/tools/verifInput.js");
+
+$(document).on('click', '[data-input=numb_increment] [data-action]:not(disabled)', function (e) {
   e.preventDefault();
   let $input = $(this).siblings('input');
   let val = $input.val() === "" ? 0 : parseInt($input.val());
   let increment = $(this).data('action') === 'increase' ? 1 : -1;
-  if ($input.data('statut') === "erreur" || val === 0 && increment === -1) return;
+  if (val === 0 && increment === -1) return;
   $input.val(val + increment);
+  Object(_tools_verifInput__WEBPACK_IMPORTED_MODULE_0__["verifInput"])($input, 'change');
 });
 /* WEBPACK VAR INJECTION */}.call(this, __webpack_require__(/*! jquery */ "./node_modules/jquery/dist/jquery.js")))
 
@@ -16377,32 +16395,33 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _tools_insertErreur__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ./tools/insertErreur */ "./src/js/tools/insertErreur.js");
 /* harmony import */ var _tools_getMessage__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ./tools/getMessage */ "./src/js/tools/getMessage.js");
 /* harmony import */ var _tools_verifInput__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! ./tools/verifInput */ "./src/js/tools/verifInput.js");
-/* harmony import */ var _event_keyDown__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(/*! ./event/keyDown */ "./src/js/event/keyDown.js");
-/* harmony import */ var _event_keyDown__WEBPACK_IMPORTED_MODULE_7___default = /*#__PURE__*/__webpack_require__.n(_event_keyDown__WEBPACK_IMPORTED_MODULE_7__);
-/* harmony import */ var _event_keyUp__WEBPACK_IMPORTED_MODULE_8__ = __webpack_require__(/*! ./event/keyUp */ "./src/js/event/keyUp.js");
-/* harmony import */ var _event_keyUp__WEBPACK_IMPORTED_MODULE_8___default = /*#__PURE__*/__webpack_require__.n(_event_keyUp__WEBPACK_IMPORTED_MODULE_8__);
-/* harmony import */ var _event_checkbox__WEBPACK_IMPORTED_MODULE_9__ = __webpack_require__(/*! ./event/checkbox */ "./src/js/event/checkbox.js");
-/* harmony import */ var _event_checkbox__WEBPACK_IMPORTED_MODULE_9___default = /*#__PURE__*/__webpack_require__.n(_event_checkbox__WEBPACK_IMPORTED_MODULE_9__);
-/* harmony import */ var _event_ck_editor__WEBPACK_IMPORTED_MODULE_10__ = __webpack_require__(/*! ./event/ck_editor */ "./src/js/event/ck_editor.js");
-/* harmony import */ var _event_ck_editor__WEBPACK_IMPORTED_MODULE_10___default = /*#__PURE__*/__webpack_require__.n(_event_ck_editor__WEBPACK_IMPORTED_MODULE_10__);
-/* harmony import */ var _event_datalist__WEBPACK_IMPORTED_MODULE_11__ = __webpack_require__(/*! ./event/datalist */ "./src/js/event/datalist.js");
-/* harmony import */ var _event_file__WEBPACK_IMPORTED_MODULE_12__ = __webpack_require__(/*! ./event/file */ "./src/js/event/file.js");
-/* harmony import */ var _event_file__WEBPACK_IMPORTED_MODULE_12___default = /*#__PURE__*/__webpack_require__.n(_event_file__WEBPACK_IMPORTED_MODULE_12__);
-/* harmony import */ var _event_date_heure__WEBPACK_IMPORTED_MODULE_13__ = __webpack_require__(/*! ./event/date_heure */ "./src/js/event/date_heure.js");
-/* harmony import */ var _event_date_heure__WEBPACK_IMPORTED_MODULE_13___default = /*#__PURE__*/__webpack_require__.n(_event_date_heure__WEBPACK_IMPORTED_MODULE_13__);
-/* harmony import */ var _event_colorpicker__WEBPACK_IMPORTED_MODULE_14__ = __webpack_require__(/*! ./event/colorpicker */ "./src/js/event/colorpicker.js");
-/* harmony import */ var _event_img_cropper__WEBPACK_IMPORTED_MODULE_15__ = __webpack_require__(/*! ./event/img_cropper */ "./src/js/event/img_cropper.js");
-/* harmony import */ var _event_multi_select__WEBPACK_IMPORTED_MODULE_16__ = __webpack_require__(/*! ./event/multi_select */ "./src/js/event/multi_select.js");
-/* harmony import */ var _event_multi_select__WEBPACK_IMPORTED_MODULE_16___default = /*#__PURE__*/__webpack_require__.n(_event_multi_select__WEBPACK_IMPORTED_MODULE_16__);
-/* harmony import */ var _event_numb_increment__WEBPACK_IMPORTED_MODULE_17__ = __webpack_require__(/*! ./event/numb_increment */ "./src/js/event/numb_increment.js");
-/* harmony import */ var _event_numb_increment__WEBPACK_IMPORTED_MODULE_17___default = /*#__PURE__*/__webpack_require__.n(_event_numb_increment__WEBPACK_IMPORTED_MODULE_17__);
-/* harmony import */ var _event_confirm__WEBPACK_IMPORTED_MODULE_18__ = __webpack_require__(/*! ./event/confirm */ "./src/js/event/confirm.js");
-/* harmony import */ var _event_confirm__WEBPACK_IMPORTED_MODULE_18___default = /*#__PURE__*/__webpack_require__.n(_event_confirm__WEBPACK_IMPORTED_MODULE_18__);
-/* harmony import */ var _event_uForm__WEBPACK_IMPORTED_MODULE_19__ = __webpack_require__(/*! ./event/uForm */ "./src/js/event/uForm.js");
-/* harmony import */ var _event_uForm__WEBPACK_IMPORTED_MODULE_19___default = /*#__PURE__*/__webpack_require__.n(_event_uForm__WEBPACK_IMPORTED_MODULE_19__);
-/* harmony import */ var _event_compteur__WEBPACK_IMPORTED_MODULE_20__ = __webpack_require__(/*! ./event/compteur */ "./src/js/event/compteur.js");
-/* harmony import */ var _event_compteur__WEBPACK_IMPORTED_MODULE_20___default = /*#__PURE__*/__webpack_require__.n(_event_compteur__WEBPACK_IMPORTED_MODULE_20__);
-/* harmony import */ var _event_init__WEBPACK_IMPORTED_MODULE_21__ = __webpack_require__(/*! ./event/init */ "./src/js/event/init.js");
+/* harmony import */ var _event_button__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(/*! ./event/button */ "./src/js/event/button.js");
+/* harmony import */ var _event_button__WEBPACK_IMPORTED_MODULE_7___default = /*#__PURE__*/__webpack_require__.n(_event_button__WEBPACK_IMPORTED_MODULE_7__);
+/* harmony import */ var _event_keyDown__WEBPACK_IMPORTED_MODULE_8__ = __webpack_require__(/*! ./event/keyDown */ "./src/js/event/keyDown.js");
+/* harmony import */ var _event_keyDown__WEBPACK_IMPORTED_MODULE_8___default = /*#__PURE__*/__webpack_require__.n(_event_keyDown__WEBPACK_IMPORTED_MODULE_8__);
+/* harmony import */ var _event_keyUp__WEBPACK_IMPORTED_MODULE_9__ = __webpack_require__(/*! ./event/keyUp */ "./src/js/event/keyUp.js");
+/* harmony import */ var _event_keyUp__WEBPACK_IMPORTED_MODULE_9___default = /*#__PURE__*/__webpack_require__.n(_event_keyUp__WEBPACK_IMPORTED_MODULE_9__);
+/* harmony import */ var _event_checkbox__WEBPACK_IMPORTED_MODULE_10__ = __webpack_require__(/*! ./event/checkbox */ "./src/js/event/checkbox.js");
+/* harmony import */ var _event_checkbox__WEBPACK_IMPORTED_MODULE_10___default = /*#__PURE__*/__webpack_require__.n(_event_checkbox__WEBPACK_IMPORTED_MODULE_10__);
+/* harmony import */ var _event_ck_editor__WEBPACK_IMPORTED_MODULE_11__ = __webpack_require__(/*! ./event/ck_editor */ "./src/js/event/ck_editor.js");
+/* harmony import */ var _event_ck_editor__WEBPACK_IMPORTED_MODULE_11___default = /*#__PURE__*/__webpack_require__.n(_event_ck_editor__WEBPACK_IMPORTED_MODULE_11__);
+/* harmony import */ var _event_datalist__WEBPACK_IMPORTED_MODULE_12__ = __webpack_require__(/*! ./event/datalist */ "./src/js/event/datalist.js");
+/* harmony import */ var _event_file__WEBPACK_IMPORTED_MODULE_13__ = __webpack_require__(/*! ./event/file */ "./src/js/event/file.js");
+/* harmony import */ var _event_file__WEBPACK_IMPORTED_MODULE_13___default = /*#__PURE__*/__webpack_require__.n(_event_file__WEBPACK_IMPORTED_MODULE_13__);
+/* harmony import */ var _event_date_heure__WEBPACK_IMPORTED_MODULE_14__ = __webpack_require__(/*! ./event/date_heure */ "./src/js/event/date_heure.js");
+/* harmony import */ var _event_date_heure__WEBPACK_IMPORTED_MODULE_14___default = /*#__PURE__*/__webpack_require__.n(_event_date_heure__WEBPACK_IMPORTED_MODULE_14__);
+/* harmony import */ var _event_colorpicker__WEBPACK_IMPORTED_MODULE_15__ = __webpack_require__(/*! ./event/colorpicker */ "./src/js/event/colorpicker.js");
+/* harmony import */ var _event_img_cropper__WEBPACK_IMPORTED_MODULE_16__ = __webpack_require__(/*! ./event/img_cropper */ "./src/js/event/img_cropper.js");
+/* harmony import */ var _event_multi_select__WEBPACK_IMPORTED_MODULE_17__ = __webpack_require__(/*! ./event/multi_select */ "./src/js/event/multi_select.js");
+/* harmony import */ var _event_multi_select__WEBPACK_IMPORTED_MODULE_17___default = /*#__PURE__*/__webpack_require__.n(_event_multi_select__WEBPACK_IMPORTED_MODULE_17__);
+/* harmony import */ var _event_numb_increment__WEBPACK_IMPORTED_MODULE_18__ = __webpack_require__(/*! ./event/numb_increment */ "./src/js/event/numb_increment.js");
+/* harmony import */ var _event_confirm__WEBPACK_IMPORTED_MODULE_19__ = __webpack_require__(/*! ./event/confirm */ "./src/js/event/confirm.js");
+/* harmony import */ var _event_confirm__WEBPACK_IMPORTED_MODULE_19___default = /*#__PURE__*/__webpack_require__.n(_event_confirm__WEBPACK_IMPORTED_MODULE_19__);
+/* harmony import */ var _event_uForm__WEBPACK_IMPORTED_MODULE_20__ = __webpack_require__(/*! ./event/uForm */ "./src/js/event/uForm.js");
+/* harmony import */ var _event_uForm__WEBPACK_IMPORTED_MODULE_20___default = /*#__PURE__*/__webpack_require__.n(_event_uForm__WEBPACK_IMPORTED_MODULE_20__);
+/* harmony import */ var _event_compteur__WEBPACK_IMPORTED_MODULE_21__ = __webpack_require__(/*! ./event/compteur */ "./src/js/event/compteur.js");
+/* harmony import */ var _event_compteur__WEBPACK_IMPORTED_MODULE_21___default = /*#__PURE__*/__webpack_require__.n(_event_compteur__WEBPACK_IMPORTED_MODULE_21__);
+/* harmony import */ var _event_init__WEBPACK_IMPORTED_MODULE_22__ = __webpack_require__(/*! ./event/init */ "./src/js/event/init.js");
 /* Version 4.0 */
 //import des modules
 
@@ -16465,6 +16484,7 @@ $(document).on('click', 'button[data-verif], input[type=submit][data-verif], a[d
 
   if (form.find(':input[data-statut=erreur]').length === 0) {
     form.trigger('submit');
+    $(this).trigger('show-loader');
     return;
   }
 
@@ -16483,6 +16503,7 @@ function checkStatut(input) {
   return ['valide', 'erreur'].indexOf($(input).data('statut')) === -1;
 }
 /* import des events */
+
 
 
 
@@ -17161,7 +17182,7 @@ function defineParamInput(champ) {
     div: $champ.closest('label'),
     message: $champ.closest('label'),
     border: $champ,
-    value: $champ.val() !== null ? $champ.val().trim() : null,
+    value: $champ.val() !== null && $champ.val() !== undefined ? $champ.val().trim() : null,
     erreur: $champ.attr('data-message') !== undefined ? $champ.attr('data-message') : 'defaut',
     name: $champ.attr('name'),
     obliger: $champ.attr('data-obliger'),

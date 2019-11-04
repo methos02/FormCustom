@@ -1,4 +1,6 @@
 .btn {
+    display: flex;
+    justify-content: center;
     min-width: 110px;
     padding: 10px;
     margin: 5px;
@@ -15,6 +17,8 @@
     cursor: pointer;
     box-sizing: border-box;
     text-align: center;
+
+    img {height: 20px}
 }
 
 .btn:hover {

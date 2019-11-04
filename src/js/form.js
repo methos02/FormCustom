@@ -59,6 +59,7 @@ $(document).on('click', 'button[data-verif], input[type=submit][data-verif], a[d
 
     if(form.find(':input[data-statut=erreur]').length === 0) {
         form.trigger('submit');
+        $(this).trigger('show-loader');
         return;
     }
 
@@ -77,6 +78,7 @@ function checkStatut(input) {
 }
 
 /* import des events */
+import './event/button';
 import './event/keyDown';
 import './event/keyUp';
 import './event/checkbox';

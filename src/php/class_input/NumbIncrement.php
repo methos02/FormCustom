@@ -14,7 +14,7 @@ class NumbIncrement extends Input
 
     public function setParam() {
         $this->params = array_merge($this->params, [
-
+            'valueFormat' => $this->params['valueFormat'] == '' ? ' value="0"' : $this->params['valueFormat'],
         ]);
     }
 }

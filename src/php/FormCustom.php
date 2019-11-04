@@ -1,6 +1,7 @@
 <?php
 namespace FormCustom;
 
+use FormCustom\class_input\Button;
 use FormCustom\class_input\Checkbox;
 use FormCustom\class_input\Datalist;
 use FormCustom\class_input\Date;
@@ -47,12 +48,6 @@ class FormCustom
         return self::open($name, $options) . '<input name="_method" type="hidden" value="PUT">';
     }
 
-    public static function btn(string $value, array $options):string {
-        $class = $options['class'] ?? '';
-        $verif = isset($options['verif'])? 'data-verif="'. $options['verif'] .'"' : "";
-
-        return '<input type="submit" value="' . $value . '" class="btn ' . $class . '" ' . $verif . ' >';
-    }
 
     static function defineOptions($nom, $first_arg, $second_arg) {
         $new_options = [
@@ -69,53 +64,48 @@ class FormCustom
         return array_merge($options, $new_options);
     }
 
+    public static function btn($first_arg, $second_arg = []):string {
+        return (new Button(__FUNCTION__, self::defineOptions('', $first_arg, $second_arg)))->generateInput();
+    }
+
     static function checkbox($nom, $first_arg, $second_arg = []) {
-        $input = new Checkbox(__FUNCTION__, self::defineOptions($nom, $first_arg, $second_arg));
-        return $input->generateInput();
+        return (new Checkbox(__FUNCTION__, self::defineOptions($nom, $first_arg, $second_arg)))->generateInput();
     }
 
     static function cp($nom, $first_arg, $second_arg = []) {
-        $input = new Input(__FUNCTION__, self::defineOptions($nom, $first_arg, $second_arg));
-        return $input->generateInput();
+        return (new Input(__FUNCTION__, self::defineOptions($nom, $first_arg, $second_arg)))->generateInput();
     }
+
     static function color_picker($nom, $first_arg, $second_arg = []) {
-        $input = new Input(__FUNCTION__, self::defineOptions($nom, $first_arg, $second_arg));
-        return $input->generateInput();
+        return (new Input(__FUNCTION__, self::defineOptions($nom, $first_arg, $second_arg)))->generateInput();
     }
 
     static function datalist($nom, $first_arg, $liste, $second_arg = []) {
-        $input = new Datalist(__FUNCTION__, $liste, self::defineOptions($nom, $first_arg, $second_arg));
-        return $input->generateInput();
+        return (new Datalist(__FUNCTION__, $liste, self::defineOptions($nom, $first_arg, $second_arg)))->generateInput();
     }
 
     static function date($nom, $first_arg, $second_arg = []) {
-        $input = new Date(__FUNCTION__, self::defineOptions($nom, $first_arg, $second_arg));
-        return $input->generateInput();
+        return (new Date(__FUNCTION__, self::defineOptions($nom, $first_arg, $second_arg)))->generateInput();
     }
 
     static function heure($nom, $first_arg, $second_arg = []) {
-        $input = new Heure(__FUNCTION__, self::defineOptions($nom, $first_arg, $second_arg));
-        return $input->generateInput();
+        return (new Heure(__FUNCTION__, self::defineOptions($nom, $first_arg, $second_arg)))->generateInput();
     }
 
     static function hidden($nom, $first_arg, $second_arg = []) {
-        $input = new Input(__FUNCTION__, self::defineOptions($nom, $first_arg, $second_arg));
-        return $input->generateInput();
+        return (new Input(__FUNCTION__, self::defineOptions($nom, $first_arg, $second_arg)))->generateInput();
     }
 
     static function img($nom, $first_arg, $second_arg = []) {
-        $input = new File(__FUNCTION__, self::defineOptions($nom, $first_arg, $second_arg));
-        return $input->generateInput();
+        return (new File(__FUNCTION__, self::defineOptions($nom, $first_arg, $second_arg)))->generateInput();
     }
 
     static function img_cropper($nom, $first_arg, $second_arg = []) {
-        $input = new Img_cropper(__FUNCTION__, self::defineOptions($nom, $first_arg, $second_arg));
-        return $input->generateInput();
+        return (new Img_cropper(__FUNCTION__, self::defineOptions($nom, $first_arg, $second_arg)))->generateInput();
     }
 
     static function licence($nom, $first_arg, $second_arg = []) {
-        $input = new Input(__FUNCTION__, self::defineOptions($nom, $first_arg, $second_arg));
-        return $input->generateInput();
+        return (new Input(__FUNCTION__, self::defineOptions($nom, $first_arg, $second_arg)))->generateInput();
     }
 
     static function mail($nom, $first_arg, $second_arg = []) {

@@ -21,6 +21,7 @@ class Input
         $value = $this->getValue($options['nom'], $options['values']);
 
         $this->params = [
+            'class' => isset($options['class'])? ' ' . $options['class']: '',
             'class_btn' => isset($options['class_btn'])? ' ' . $options['class_btn']: '',
             'class_label' => isset($options['class_label'])? ' ' . $options['class_label']: '',
             'class_after' => isset($options['after'])? ' after': '',

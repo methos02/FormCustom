@@ -14,7 +14,7 @@ export function defineParamInput(champ) {
         div: $champ.closest('label'),
         message: $champ.closest('label'),
         border: $champ,
-        value: $champ.val() !== null ? $champ.val().trim() : null,
+        value: $champ.val() !== null && $champ.val() !== undefined ? $champ.val().trim() : null,
         erreur: $champ.attr('data-message') !== undefined ? $champ.attr('data-message') : 'defaut',
 
         name: $champ.attr('name'),

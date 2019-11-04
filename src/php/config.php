@@ -1,5 +1,6 @@
 <?php
 return [
+    'btn' => 'button',
     'checkbox' => 'checkbox',
     'color_picker' => 'color_picker',
     'cp' => 'input',

@@ -108,6 +108,8 @@
   border-radius: 0 4px 4px 0; }
 
 .btn {
+  display: flex;
+  justify-content: center;
   min-width: 110px;
   padding: 10px;
   margin: 5px;
@@ -124,6 +126,8 @@
   cursor: pointer;
   box-sizing: border-box;
   text-align: center; }
+  .btn img {
+    height: 20px; }
 
 .btn:hover {
   background-color: #e0e0e0; }
