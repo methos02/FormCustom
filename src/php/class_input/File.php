@@ -20,6 +20,14 @@ class File extends Input
     }
 
     public function definePreview($params) {
-        return isset($params['preview']) && $params['preview'] != "" ? $params['preview'] : self::DEFAUT_PREVIEW[$this->dataType];
+        if(!isset($params['preview']) || $params['preview'] == "") {
+            return self::DEFAUT_PREVIEW[$this->dataType];
+        }
+
+        if(is_numeric($params['preview'])) {
+            return '' . $params['preview'];
+        }
+
+        return $params['preview'];
     }
 }

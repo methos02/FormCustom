@@ -12,7 +12,7 @@
                 </video>
             <?php endif; ?>
             <?php if(is_numeric($params['source']) ) : ?>
-                <iframe src="https://player.vimeo.com/video/<?= $params['source'] ?>" width="auto" height="auto" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe>
+                <iframe <?= $params['id'] ?> src="https://player.vimeo.com/video/<?= $params['source'] ?>" width="auto" height="auto" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe>
             <?php endif; ?>
             <?php if($params['preview'] == '') : ?>
                 <img src="<?= $params['source'] ?>" alt="Apperçu de l'image" class="appercu-file" data-preview>
