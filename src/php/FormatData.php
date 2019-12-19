@@ -12,7 +12,7 @@ class FormatData
 
         if(empty($datas)) return [];
 
-        if(is_array($datas) && is_object($datas[0]))  return self::getArrayLaravelData($datas);
+        if(is_array($datas) && is_object($datas[array_key_first($datas)]))  return self::getArrayLaravelData($datas);
 
         if(method_exists($datas, 'getAttributes')) return $datas -> getAttributes();
 
