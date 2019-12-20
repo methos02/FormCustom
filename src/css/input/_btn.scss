@@ -21,7 +21,7 @@
     img {height: 20px}
 }
 
-.btn:hover {
+.btn:hover:not([disabled]) {
     background-color: #e0e0e0;
 }
 
