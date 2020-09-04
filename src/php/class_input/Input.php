@@ -58,6 +58,10 @@ class Input
             return $this->formatError($errors[$key]);
         }
 
+        if(is_object($errors) && method_exists($errors, 'get')) {
+            return $this->formatError($errors->get($key));
+        }
+
         return "";
     }
 
