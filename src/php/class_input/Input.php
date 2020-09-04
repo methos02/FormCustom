@@ -1,7 +1,6 @@
 <?php
 namespace FormCustom\class_input;
 
-
 class Input
 {
     CONST WIDTH = ['demi', 'order', 'tier'];
@@ -58,8 +57,8 @@ class Input
             return $this->formatError($errors[$key]);
         }
 
-        if(is_object($errors) && method_exists($errors, 'get')) {
-            return $this->formatError($errors->get($key));
+        if(is_object($errors) && class_exists('Illuminate\Support\ViewErrorBag') && !empty($errors->get($key))) {
+            return $this->formatError($errors->get($key)[0]);
         }
 
         return "";
