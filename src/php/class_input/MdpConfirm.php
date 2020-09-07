@@ -24,16 +24,9 @@ class MdpConfirm extends Mdp
     }
 
     public function getErrorMdpConfirm($name, $errors) {
-        $input_error = ['1' => '', '2' => ''];
-
-        if(is_array($errors) && key_exists($name . '_1', $errors)) {
-            $input_error['1'] = $this->formatError($errors[$name . '_1']);
-        }
-
-        if(is_array($errors) && key_exists($name . '_confirmation', $errors)) {
-            $input_error['2'] = $this->formatError($errors[$name . '_confirmation']);
-        }
-
-        return $input_error;
+        return [
+            '1' => $this->getError($name, $errors),
+            '2' => $this->getError($name . '_confirmation', $errors)
+        ];
     }
 }
