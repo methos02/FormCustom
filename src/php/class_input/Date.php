@@ -1,7 +1,7 @@
 <?php
 namespace FormCustom\class_input;
 
-use App\Utils\FormCustom\DateTools;
+use FormCustom\DateTools;
 class Date extends Input
 {
     public $tools;
