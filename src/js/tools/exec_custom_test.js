@@ -1,4 +1,4 @@
-import {tests} from "formcustom/js/custom_test";
+import {tests} from "../../../config/formcustom/js/custom_test";
 import {msgErreur} from "../../../config/formcustom/js/message";
 
 export function exec_custom_test(input) {
