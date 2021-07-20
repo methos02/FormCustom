@@ -16809,7 +16809,11 @@ $(document).on('click', 'button[data-verif], input[type=submit][data-verif], a[d
 
   if (form.find(':input[data-statut=erreur]').length === 0) {
     form.trigger('submit');
-    $(this).trigger('show-loader');
+
+    if ($(this).find("[alt=loader]").length !== 0) {
+      $(this).trigger('show-loader');
+    }
+
     return;
   }
 
