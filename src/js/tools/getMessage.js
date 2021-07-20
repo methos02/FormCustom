@@ -1,4 +1,4 @@
-import {msgErreur} from "formcustom/js/message";
+import {msgErreur} from "../../../config/formcustom/js/message";
 import {fileType} from "formcustom/js/fileType";
 
 export function getMessage(input, prefix) {
