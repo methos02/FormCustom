@@ -1,3 +1,7 @@
+form {
+  > .label-compact:not(:last-child), > button:not(:last-child) { margin-bottom: 15px;}
+}
+
 .row-flex {
   display: flex;
   margin: 10px 0;
