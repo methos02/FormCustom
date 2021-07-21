@@ -3,6 +3,7 @@
     "description": "form manager",
     "type": "library",
     "license": "Apache-2.0",
+    "version": "1.0.4",
     "authors": [
         {
             "name": "Methos02",
