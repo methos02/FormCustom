@@ -12,4 +12,5 @@ const mix = require('laravel-mix');
  */
 
 mix.js('src/js/form.js', 'public/js')
-   .sass('src/css/formCustom.scss', 'public/css');
+    .autoload({ jquery: ['$', 'window.jQuery'] })
+    .sass('src/css/formCustom.scss', 'public/css');
