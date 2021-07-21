@@ -6,6 +6,8 @@
   .tier {flex-basis: 33%}
   .order {flex: 1;}
 
+  > .label-compact:not(:last-child) { margin-right: 12px;}
+
   > a, > input[type=submit], > button {
     min-width: 110px;
     margin: 0 auto;
@@ -17,8 +19,6 @@
 .row-column {
   display: flex;
   flex-direction: column;
-
-  > .label-compact { margin-right: 0;}
 
   >* { margin: 5px 0; }
 }
