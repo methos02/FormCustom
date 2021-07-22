@@ -8,7 +8,7 @@ export function verifMdp(input, event){
         prefixe = (event === "focusout" || event === "submit")? "length" : false;
     }
 
-    if(input.mdp_2.length !== 0 && input.mdp_2.val().length !== 0 && input.mdp_2.data('statut') !== 'erreur'){
+    if(input.mdp_2.length !== 0 && input.mdp_2.val().length !== 0 && input.mdp_2.data('statut') !== 'erreur' && prefixe === undefined){
         verif2Mdp(input, event);
     }
 
