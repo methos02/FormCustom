@@ -17,7 +17,7 @@ class Input
     }
 
     public function setCommunParam($options) {
-        $value = $this->getValue($options['nom'], $options['values']);
+        $value = $this->getValue($options);
 
         $this->params = [
             'class' => isset($options['class'])? ' ' . $options['class']: '',
@@ -68,10 +68,12 @@ class Input
         return '<span class="input_message" data-message="erreur">' . $error . '</span>';
     }
 
-    public function getValue($key, $values) {
-        $value = (is_array($values) && key_exists($key, $values))? $values[$key] : "";
+    public function getValue($options) {
+        $value = (is_array($options['values']) && key_exists($options['nom'], $options['values']))? $options['values'][$options['nom']] : "";
 
-        return is_array($value)? $value : strval($value);
+        if($value == "" && isset($options['value'])) $value = $options['value'];
+
+        return is_array($options['values'])? $value : strval($value);
     }
 
     public function formatValue($value) {

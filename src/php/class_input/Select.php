@@ -15,7 +15,7 @@ class Select extends Input
     }
 
     public function setParam($options) {
-        $default = isset($options['default'])? $options['default'] : $this->getValue($options['nom'], $options['values']);
+        $default = isset($options['default'])? $options['default'] : $this->getValue($options);
         $null = isset($options['null']) && $options['null'] == 1 ? 1 : null;
         $type_label = isset($options['short_label']) && $options['short_label'] == false ? 'label-out' : '';
 

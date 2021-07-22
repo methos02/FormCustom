@@ -20,7 +20,7 @@ class Checkbox extends Input
         if( isset($options['checked']) && $options['checked'] == true)
             return $options['checked'];
 
-        $checked = $this->getValue($options['nom'], $options['values']);
+        $checked = $this->getValue($options);
 
         if($checked == true)
             return $checked;
