@@ -39,6 +39,11 @@ class FormCustom
     }
 
     public static function close() {
+        self::$config = null;
+        self::$const = null;
+        self::$errors = null;
+        self::$values = null;
+
         return '</form>';
     }
 
