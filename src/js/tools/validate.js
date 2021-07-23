@@ -6,5 +6,5 @@ export function validate (input) {
 
     if (input.type === 'file') {validateFile(input); return;}
     input.border.addClass('input_valide');
-    input.$champ.trigger('custom_valide');
+    input.border.trigger('custom_valide');
 }
