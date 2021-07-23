@@ -1,7 +1,7 @@
 <?php if(!isset($params) || !is_array($params)) { exit;} ?>
 <div class="file-compact<?= $params['width'] . $params['class_label']?>"<?= $params['view']?>>
     <label class="label-compact label-file">
-        <?php if (in_array($params['dataType'], ['img'])): ?>
+        <?php if (in_array($params['dataType'], ['img']) && $params['preview'] != false): ?>
             <img src="<?= $params['source'] ?>" alt="Apperçu de l'image" class="appercu-file" data-preview>
             <img src="" class="appercu-file" alt="Apperçu de la video postée" style="display: none" data-input>
         <?php endif; ?>
