@@ -2,7 +2,7 @@
   position: relative;
   margin-right: 15px;
   font-weight: normal !important;
-  width: 145px;
+  min-width: 145px;
   height: 44px;
   line-height: 1.42857143;
   color: #555;
@@ -17,16 +17,26 @@
 .date-jm{
   padding-left: 10px;
   padding-top: 18px;
-  height: 42px;
+  box-sizing: border-box;
+  height: 50px;
   width: 32px;
   border: 0;
+
+  &.input-valid {
+    border: none;
+    color: #8cd453;
+  }
 }
 
-.date-j{ border-radius: 5px 0 0 5px;}
 .date-a{
-  height: 42px;
+  box-sizing: border-box;
+  height: 50px;
   padding-top: 18px;
   border: 0;
   width: 50px;
-  border-radius: 0 4px 4px 0;
+
+  &.input-valid {
+    border: none;
+    color: #8cd453;
+  }
 }
