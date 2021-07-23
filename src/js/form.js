@@ -69,8 +69,7 @@ $(document).on('click', 'button[data-verif], input[type=submit][data-verif], a[d
     form.trigger('form_erreur');
 });
 
-function noStatut(input) { return $(input).data('type').indexOf('multi') === -1 && checkStatut(input);
-}
+function noStatut(input) { return $(input).data('type').indexOf('multi') === -1 && checkStatut(input);}
 
 function statutMultiInput(input) {
     return $(input).data('type').indexOf('multi') !== -1 && checkStatut($(input).closest('.label-compact'));

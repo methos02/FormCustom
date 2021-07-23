@@ -1,13 +1,13 @@
 export function verifDate(input, event){
     //Verification que la value est bien numéric
-    if (!$.isNumeric(input.value) && input.value !== "") { return ""}
+    if (!isNumb(input.value) && input.value !== "") { return ""}
 
     //Vérification de l'input
     if (input.jour !== "" && verifJour(input.jour)) { return 'jour';}
     if (input.mois !== "" && verifMois(input.mois)) { return 'mois';}
 
     //verification que l'un des input du champ ne contient pas des carractères invalide
-    if ((!$.isNumeric(input.jour) && input.jour !== "") || (!$.isNumeric(input.mois) && input.mois !== "") || (!$.isNumeric(input.annee) && input.annee !== "")) { return ""; }
+    if ((!isNumb(input.jour) && input.jour !== "") || (!isNumb(input.mois) && input.mois !== "") || (!isNumb(input.annee) && input.annee !== "")) { return ""; }
 
     //fin de la fonction si tous les champs ne sont pas rempli
     if (input.jour === "" && input.mois === "" && input.annee === "" && input.obliger === "1" && event === "submit") { return 'empty';}
@@ -26,7 +26,7 @@ export function verifDate(input, event){
 export function dateParam(input) {
     input.div = input.$champ.closest('label');
     input.name = input.div.data('nom');
-    input.type = input.div.data('type');
+    input.border = input.$champ.closest('label');
     input.obliger = input.div.data('obliger');
 
     input.jour = input.div.find('input[name = jour_' + input.name + ']').val();
@@ -137,4 +137,8 @@ function anneeValide(){
     }
 
     return [annee-1, annee];
+}
+
+function isNumb( val ) {
+    return !isNaN(parseInt(val))
 }

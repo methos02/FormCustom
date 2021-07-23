@@ -19,7 +19,7 @@ export function defineParamInput(champ) {
 
         name: $champ.attr('name'),
         obliger: $champ.attr('data-obliger'),
-        type: $champ.attr('data-type'),
+        type: champ.dataset.type,
         custom: $champ.closest('[data-input]').attr('data-custom'),
     };
 

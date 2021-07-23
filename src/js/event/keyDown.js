@@ -69,8 +69,6 @@ $(document).on('keyup','input[data-type=date], input[data-type=heure]',function(
     let value = $(this).val();
     let name = $(this).attr('name');
 
-    if(input.hasClass('input_erreur')){return;}
-
     if(value.length === 2 && ((e.keyCode > 48 && e.keyCode < 57) || (e.keyCode > 96 && e.keyCode < 105))){
         if(name.indexOf('jour') !== -1) {
             rightMove(input, 'mois');
