@@ -1,5 +1,10 @@
 .file-compact {
   text-align: center;
+
+  &.right {
+    display: flex;
+    flex-direction: row-reverse;
+  }
 }
 
 .label-file {

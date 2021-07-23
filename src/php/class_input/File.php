@@ -16,6 +16,7 @@ class File extends Input
             'source' => $this->definePreview($options),
             'accept' => $options['accept'] ?? $this->dataType ,
             'preview' => $options['preview'] ?? '',
+            'position' => ' ' . $options['position'] ?? '',
         ]);
     }
 
