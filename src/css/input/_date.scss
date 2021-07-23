@@ -4,6 +4,7 @@
   font-weight: normal !important;
   min-width: 145px;
   height: 44px;
+  overflow: hidden;
   line-height: 1.42857143;
   color: #555;
   background-color: #fff;
@@ -22,7 +23,7 @@
   width: 32px;
   border: 0;
 
-  &.input-valid {
+  &.input_valid {
     border: none;
     color: #8cd453;
   }
@@ -35,7 +36,7 @@
   border: 0;
   width: 50px;
 
-  &.input-valid {
+  &.input_valid {
     border: none;
     color: #8cd453;
   }
