@@ -1,5 +1,5 @@
 <?php if(!isset($params) || !is_array($params)) { exit;} ?>
-<label class="border-date" data-nom="<?= $params['nom'] ?>" <?= $params['type'] . $params['obliger'] ?>>
+<label class="border-date" data-nom="<?= $params['nom'] ?>" <?= $params['date_type'] . $params['obliger'] ?>>
     <span class="label-input"><?= $params['label'] ?></span>
     <input name="jour_<?= $params['nom'] ?>" type="text" maxlength="2" autocomplete="off" data-type="date" class="date-jm date-j" <?= $params['jour'] ?>>
     <span class="date-separateur">/</span>

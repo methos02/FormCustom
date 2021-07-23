@@ -16,16 +16,17 @@ export function verifDate(input, event){
 
     if (verifDateCoherence(input.jour, input.mois, input.annee) === false) { return 'coherence'; }
 
-    if(input.type !== undefined){
-        if(input.type === 'futur' && verifDateFutur(input.jour, input.mois, input.annee) === false){ return 'futur'; }
-        if(input.type === 'scolaire' && verifDateScolaire(input.mois, input.annee) === false){ return 'scolaire'; }
-        if(input.type === 'passe' && verifDatePasse(input.jour, input.mois, input.annee) === false){ return 'passe'; }
+    if(input.date_type !== undefined){
+        if(input.date_type === 'futur' && verifDateFutur(input.jour, input.mois, input.annee) === false){ return 'futur'; }
+        if(input.date_type === 'scolaire' && verifDateScolaire(input.mois, input.annee) === false){ return 'scolaire'; }
+        if(input.date_type === 'passe' && verifDatePasse(input.jour, input.mois, input.annee) === false){ return 'passe'; }
     }
 }
 
 export function dateParam(input) {
     input.div = input.$champ.closest('label');
     input.name = input.div.data('nom');
+    input.date_type = input.div.data('date_type');
     input.border = input.$champ.closest('label');
     input.obliger = input.div.data('obliger');
 
@@ -88,17 +89,11 @@ function verifDateCoherence(jour,mois,annee){
 function verifDateFutur(jour, mois, annee){
     let d = new Date();
 
-    if(annee.val() < d.getFullYear()){
-        return false
-    }
+    if(parseInt(annee) < d.getFullYear()){ return false }
 
-    if(mois.val() < d.getMonth()+1 && annee.val() === d.getFullYear()){
-        return false
-    }
+    if(parseInt(mois) < d.getMonth()+1 && parseInt(annee) === d.getFullYear()){ return false }
 
-    if(jour.val() < d.getDate() && mois.val() === d.getMonth() +1 && annee.val() === d.getFullYear()){
-        return false
-    }
+    if(parseInt(jour) < d.getDate() && parseInt(mois) === d.getMonth() +1 && parseInt(annee) === d.getFullYear()){ return false }
 }
 
 function verifDateScolaire(mois, annee){
