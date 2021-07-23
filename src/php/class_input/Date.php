@@ -20,7 +20,7 @@ class Date extends Input
             'annee' => $this->tools->formatDate($date, 'Y'),
             'jour' => $this->tools->formatDate($date, 'd'),
             'mois' => $this->tools->formatDate($date, 'm'),
-            'date_type' => $options['date_type'] ? " data-date_type={$options['date_type']}" : ''
+            'date_type' => isset($options['date_type']) ? " data-date_type={$options['date_type']}" : ''
         ]);
     }
 }
