@@ -8,5 +8,6 @@ export function insertErreur(input, message){
     if(message !== undefined && message !== ""){
         input.message.append('<span class="input_message" data-message="erreur">' + message + '</span>');
         input.message.find('.label-input').hide();
+        console.log(message);
     }
 }
