@@ -26,6 +26,7 @@ $(document).on('click', 'button[data-verif], input[type=submit][data-verif], a[d
     e.preventDefault();
     let name = $(this).data('verif');
     let form = $('form[name=' + name + ']');
+    const native_form = document.querySelector('form[name=' + name + ']');
 
     //verrification des adresses
     form.find('input[data-type=rue]').each(function() {
@@ -59,7 +60,7 @@ $(document).on('click', 'button[data-verif], input[type=submit][data-verif], a[d
 
     if(form.find(':input[data-statut=erreur]').length === 0) {
         form.trigger('submit');
-        document.querySelector('form[name=' + name + ']').dispatchEvent(new Event("submit"));
+        native_form.dispatchEvent(new Event("submit"));
 
         if($(this).find("[alt=loader]").length !== 0) {
             $(this).trigger('show-loader');
@@ -68,6 +69,7 @@ $(document).on('click', 'button[data-verif], input[type=submit][data-verif], a[d
     }
 
     form.trigger('form_erreur');
+    native_form.dispatchEvent(new Event("form_erreur"));
 });
 
 function noStatut(input) { return $(input).data('type').indexOf('multi') === -1 && checkStatut(input);}
