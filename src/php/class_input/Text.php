@@ -13,6 +13,7 @@ class Text extends Input
         $this->params = array_merge($this->params, [
             'height' => isset($options['height']) && is_numeric($options['height'])? ' style="height:' . $options['height'] . 'px"': '',
             'compteur' => $options['compteur'] ?? false,
+            'autogrow' => isset($options['autogrow']) && $options['autogrow'] == true ? ' data-autogrow' : ''
         ]);
     }
 }

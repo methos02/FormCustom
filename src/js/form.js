@@ -96,3 +96,4 @@ import './event/confirm';
 import './event/uForm';
 import './event/compteur';
 import './event/init';
+import './event/textarea';

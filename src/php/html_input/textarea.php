@@ -5,7 +5,7 @@
     </div>
 <?php endif; ?>
 <label class="label-compact label-text<?= $params['width'] ?>" <?= $params['height'] ?>>
-    <textarea name="<?= $params['nom'] ?>" placeholder="<?= $params['label'] ?>" class="text-compact<?= $params['error'] != ""? ' input_erreur' : '' ?>" data-type="texte" <?= $params['obliger'] . $params['message']. $params['disabled'] ?> ><?= $params['value'] ?></textarea>
+    <textarea name="<?= $params['nom'] ?>" placeholder="<?= $params['label'] ?>" class="text-compact<?= $params['error'] != ""? ' input_erreur' : '' ?>" data-type="texte" <?= $params['obliger'] . $params['message']. $params['disabled'] . $params['autogrow'] ?> ><?= $params['value'] ?></textarea>
     <span class="label-input"></span>
     <?= $params['error'] ?>
 </label>
