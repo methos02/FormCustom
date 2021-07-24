@@ -6,7 +6,7 @@ import {defineParamInput} from "./defineParamInput";
 
 export function initialisation(input){
     input.border.removeClass('input_valide input_erreur');
-    input.$champ.removeAttr('data-statut');
+    input.border.removeAttr('data-statut');
 
     if(!input.$champ.is('[data-cropper]')) {
         input.div.find('.label-input').show();
