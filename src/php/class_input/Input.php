@@ -71,9 +71,9 @@ class Input
     public function getValue($options) {
         $value = (is_array($options['values']) && key_exists($options['nom'], $options['values']))? $options['values'][$options['nom']] : "";
 
-        if($value == "" && isset($options['value'])) $value = $options['value'];
+        if($value == "" && isset($options['value'])) $value = (string) $options['value'];
 
-        return is_array($options['values'])? $value : strval($value);
+        return strval($value);
     }
 
     public function formatValue($value) {
