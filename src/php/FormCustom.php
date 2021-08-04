@@ -109,6 +109,10 @@ class FormCustom
         return (new Img_cropper(__FUNCTION__, self::defineOptions($nom, $first_arg, $second_arg)))->generateInput();
     }
 
+    static function input($nom, $first_arg, $second_arg = []) {
+        return (new Input(__FUNCTION__, self::defineOptions($nom, $first_arg, $second_arg)))->generateInput();
+    }
+
     static function licence($nom, $first_arg, $second_arg = []) {
         return (new Input(__FUNCTION__, self::defineOptions($nom, $first_arg, $second_arg)))->generateInput();
     }

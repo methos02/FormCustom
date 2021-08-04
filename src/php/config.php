@@ -8,6 +8,7 @@ return [
     'date' => 'date',
     'heure' => 'heure',
     'hidden' => 'hidden',
+    'input' => 'input',
     'img' => 'file',
     'img_cropper' => 'img_cropper',
     'license' => 'input',
