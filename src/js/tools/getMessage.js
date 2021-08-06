@@ -3,7 +3,6 @@ import {fileType} from "../config/fileType";
 
 export function getMessage(input, prefix) {
     if(prefix === false) {return "";}
-    console.log(msgErreur);
     prefix = prefix === "" ? "" : prefix + "_";
     input.erreur = (input.erreur === undefined || msgErreur[input.type][prefix + input.erreur] === undefined)? "defaut" : input.erreur;
 
