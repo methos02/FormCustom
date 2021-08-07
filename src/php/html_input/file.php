@@ -1,5 +1,6 @@
 <?php if(!isset($params) || !is_array($params)) { exit;} ?>
 <div class="file-compact<?= $params['width'] . $params['class_label'] . $params['position'] ?>"<?= $params['view']?>>
+    <button class="btn btn-default btn-file" data-file="<?= $params['nom'] ?>"> <?= $params['label'] ?> </button>
     <label class="label-compact label-file">
         <?php if (in_array($params['dataType'], ['img']) && $params['preview'] != false): ?>
             <img src="<?= $params['source'] ?>" alt="Apperçu de l'image" class="appercu-file" data-preview>
@@ -25,5 +26,5 @@
         <input type="file" name="<?= $params['nom'] ?>" data-type="file" data-accept="<?= $params['accept'] ?>" <?= $params['option'] . $params['obliger'] ?> style="display: none;">
         <?= $params['error'] ?>
     </label>
-    <button class="btn btn-default btn-file" data-file="<?= $params['nom'] ?>"> <?= $params['label'] ?> </button>
+
 </div>
